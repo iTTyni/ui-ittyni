@@ -1,6 +1,7 @@
 # ITTYNI.COM user interface guide
 
-> **Note**
+> **Warning**
+
 > this UI is reserved for [www.ittyni.com][https://ittyni.com]
 
 ## Commands
