@@ -1,10 +1,7 @@
-# TSDX React w/ Storybook User Guide
+# ITTYNI.COM user interface guide
 
-Congrats! You just saved yourself hours of work by bootstrapping this project with TSDX. Let’s get you oriented with what’s here and how to use it.
-
-> This TSDX setup is meant for developing React component libraries (not apps!) that can be published to NPM. If you’re looking to build a React-based app, you should use `create-react-app`, `razzle`, `nextjs`, `gatsby`, or `react-static`.
-
-> If you’re new to TypeScript and React, checkout [this handy cheatsheet](https://github.com/sw-yx/react-typescript-cheatsheet/)
+> **Note**
+> this UI is reserved for [www.ittyni.com][https://ittyni.com]
 
 ## Commands
 
@@ -25,8 +22,10 @@ Then run either Storybook or the example playground:
 Run inside another terminal:
 
 ```bash
-yarn storybook
+ npm run storybook# or yarn storybook
 ```
+> NOTE: open http://localhost:6006 to open storybook
+
 
 This loads the stories from `./stories`.
 
