@@ -1,0 +1,12 @@
+version: '3.9'
+services:
+  app:
+    build: 
+      context: .
+    volumes:
+      - .:/ittyniui
+    ports:
+      - 6006:6006
+    image: ittyni:ui
+    container_name: ittyni_ui
+    command: npm start
