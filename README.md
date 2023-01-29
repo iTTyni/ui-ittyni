@@ -6,7 +6,7 @@
 
 ## Commands
 
-### Example
+### Install
 
 Then run the example inside another:
 
