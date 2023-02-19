@@ -21,6 +21,5 @@ export interface IThemeInterface {
   windowHeight : number
 }
 
-export default styled;
 
-export { css, createGlobalStyle, keyframes, ThemeProvider };
+export {styled, css, createGlobalStyle, keyframes, ThemeProvider };
