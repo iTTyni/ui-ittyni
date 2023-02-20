@@ -1,12 +1,23 @@
 import * as React from 'react';
+import { Link } from 'react-router-dom';
 
 
-const Header: React.FC<any> = () => {
 
-
+const Header: React.FC<any> = ({Logo, LeftMenu, MiddleMenu}) => {
+ 
   return (
     <>
-      header component 
+      {/* left menu */}
+      <div style={{ display: "flex" }}>
+        log
+      </div>
+      {/* middle menu */}
+      <div style={{ padding: "5px" }}>
+        middle
+      </div>
+
+      {/* right menu */}
+      <div>auth</div>
     </>
   );
 };
@@ -14,7 +25,14 @@ const Header: React.FC<any> = () => {
 export default Header;
 
 
-// header container style
+// header logo 
+
+// header links
+
+
+
+
+
 
 
 

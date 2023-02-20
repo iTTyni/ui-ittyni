@@ -11,15 +11,24 @@ const {
 >;
 
 export interface IThemeInterface {
-  colors: {
-    [key: string] : string
+  globals: {
+    backgroundColor: string
+    margin: number
+    padding: number
   },
-  fonts :{
-    fontSize : number,
-    fontFamily : string
+  color: {
+    defaultColor: string;
+    primaryColor: string;
+    secondaryColor: string;
+    thirdColor: string;
+    fourthColor: string;
   },
-  windowHeight : number
+  font: {
+    fontSize: number,
+    fontFamily: string
+  },
+  windowHeight: number
 }
 
 
-export {styled, css, createGlobalStyle, keyframes, ThemeProvider };
+export { styled, css, createGlobalStyle, keyframes, ThemeProvider };
