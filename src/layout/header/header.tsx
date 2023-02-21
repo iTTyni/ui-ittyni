@@ -3,21 +3,24 @@ import { Link } from 'react-router-dom';
 
 
 
+
+
 const Header: React.FC<any> = ({Logo, LeftMenu, MiddleMenu}) => {
  
   return (
     <>
       {/* left menu */}
       <div style={{ display: "flex" }}>
-        log
+        
+        <HeaderLogo />
+
+       <HeaderLinks />
+
       </div>
-      {/* middle menu */}
-      <div style={{ padding: "5px" }}>
-        middle
-      </div>
+ 
 
       {/* right menu */}
-      <div>auth</div>
+      <div>auth button</div>
     </>
   );
 };
@@ -26,13 +29,25 @@ export default Header;
 
 
 // header logo 
+const HeaderLogo = () => {
 
+  return (
+    <div style={{ display: "flex", background: "red" }}>
+      {/* Logo */}
+      <div>iTTyni</div>
+    </div>
+  )
+}
 // header links
+const HeaderLinks: React.FC<any> = () => {
 
-
-
-
-
+  return (
+    <div style={{ display: "flex" }}>
+      links
+    </div>
+  )
+}
+// header links
 
 
 

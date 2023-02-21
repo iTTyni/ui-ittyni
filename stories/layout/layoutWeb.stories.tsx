@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Meta, Story } from "@storybook/react";
-import { LayoutWeb } from "../../src/layout"
+import { LayoutWeb } from "../../src/layout"; 
 
 
 const meta: Meta = {

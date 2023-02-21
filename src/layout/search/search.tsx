@@ -9,8 +9,10 @@ export const Search: FC<any> = ({ }) => {
     const [showOptions, setShowOptions] = React.useState<boolean>(false)
     return (
         <SearchContainer showOptions={showOptions} style={{width: "70%", marginLeft: "15%"}}>
-            <div style={{color: "#50b750", fontSize: "x-large", textDecoration: 'underline', padding: "15px 0"}}>
-                Paramedical
+            <div style={
+              {color: "#50b750", fontSize: "x-large", textDecoration: 'underline', padding: "15px 0", textDecorationStyle: "dotted"}
+            }>
+                <span style={{color: "red"}}>TT</span><span style={{color: "grey"}}>para</span>
             </div>
             <div className="search">
                 <i className="fa fa-search font-green" />
@@ -47,7 +49,8 @@ export const SearchContainer = styled('div') <
     background-color: rgba(34,34,34,.05);
     :focus {box-shadow: 2px 2px 2px 2px #e1e1e1;}
     i {
-      color: #c4cace;
+      background-color: rgba(0,0,0,0);
+      color: #000000;
       left: auto;
       float: left;
       position: absolute;
