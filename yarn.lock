@@ -5613,10 +5613,10 @@
     "lodash.memoize" "^4.1.2"
     "lodash.uniq" "^4.5.0"
 
-"caniuse-lite@^1.0.0", "caniuse-lite@^1.0.30001109", "caniuse-lite@^1.0.30001125", "caniuse-lite@^1.0.30001286", "caniuse-lite@^1.0.30001297", "caniuse-lite@^1.0.30001299":
-  "integrity" "sha512-bdsfZd6K6ap87AGqSHJP/s1V+U6Z5lyrcbBu3ovbCCf8cSYpwTtGrCBObMpJqwxfTbLW6YTIdbb1jEeTelcpYQ=="
-  "resolved" "https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001304.tgz"
-  "version" "1.0.30001304"
+"caniuse-lite@^1.0.0", "caniuse-lite@^1.0.30001109", "caniuse-lite@^1.0.30001125", "caniuse-lite@^1.0.30001286", "caniuse-lite@^1.0.30001297", "caniuse-lite@^1.0.30001299", "caniuse-lite@^1.0.30001457":
+  "integrity" "sha512-SDIV6bgE1aVbK6XyxdURbUE89zY7+k1BBBaOwYwkNCglXlel/E7mELiHC64HQ+W0xSKlqWhV9Wh7iHxUjMs4fA=="
+  "resolved" "https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001457.tgz"
+  "version" "1.0.30001457"
 
 "capture-exit@^2.0.0":
   "integrity" "sha512-PiT/hQmTonHhl/HFGN+Lx3JJUznrVYJ3+AQsnthneZbvW7x+f08Tk7yLJTLEOUvBTbduLeeBkxEaYXUOUrRq6g=="
@@ -14192,18 +14192,7 @@
     "use-callback-ref" "^1.2.5"
     "use-sidecar" "^1.0.5"
 
-"react-helmet-async@^1.0.2":
-  "integrity" "sha512-LTTzDDkyIleT/JJ6T/uqx7Y8qi1EuPPSiJawQY/nHHz0h7SPDT6HxP1YDDQx/fzcVxCqpWEEMS3QdrSrNkJYhg=="
-  "resolved" "https://registry.npmjs.org/react-helmet-async/-/react-helmet-async-1.1.2.tgz"
-  "version" "1.1.2"
-  dependencies:
-    "@babel/runtime" "^7.12.5"
-    "invariant" "^2.2.4"
-    "prop-types" "^15.7.2"
-    "react-fast-compare" "^3.2.0"
-    "shallowequal" "^1.1.0"
-
-"react-helmet-async@^1.0.7":
+"react-helmet-async@^1.0.2", "react-helmet-async@^1.0.7":
   "integrity" "sha512-LTTzDDkyIleT/JJ6T/uqx7Y8qi1EuPPSiJawQY/nHHz0h7SPDT6HxP1YDDQx/fzcVxCqpWEEMS3QdrSrNkJYhg=="
   "resolved" "https://registry.npmjs.org/react-helmet-async/-/react-helmet-async-1.1.2.tgz"
   "version" "1.1.2"
@@ -14439,7 +14428,7 @@
     "use-composed-ref" "^1.0.0"
     "use-latest" "^1.0.0"
 
-"react@*", "react@^0.14.0 || ^15.0.0 || ^16.0.0", "react@^0.14.0 || ^15.0.0 || ^16.0.0 || ^17.0.0", "react@^16.13.1 || ^17.0.0", "react@^16.6.0 || ^17.0.0", "react@^16.8.0 || ^17", "react@^16.8.0 || ^17.0.0", "react@^16.8.3", "react@^16.8.4 || ^17.0.0", "react@^17.0.2", "react@>= 0.14.0", "react@>= 16", "react@>= 16.3.0", "react@>= 16.8.0", "react@>=15", "react@>=16.12.0", "react@>=16.8.0", "react@15.x || 16.x || 16.4.0-alpha.0911da3", "react@17.0.2":
+"react@*", "react@^0.14.0 || ^15.0.0 || ^16.0.0", "react@^0.14.0 || ^15.0.0 || ^16.0.0 || ^17.0.0", "react@^0.14.8 || ^15.0.1 || ^16.0.0 || ^17.0.1", "react@^16.13.1 || ^17.0.0", "react@^16.6.0 || ^17.0.0", "react@^16.8.0 || ^17", "react@^16.8.0 || ^17.0.0", "react@^16.8.4 || ^17.0.0", "react@^17.0.2", "react@>= 0.14.0", "react@>= 16", "react@>= 16.3.0", "react@>= 16.8.0", "react@>=15", "react@>=16.12.0", "react@>=16.3.0", "react@>=16.8.0", "react@15.x || 16.x || 16.4.0-alpha.0911da3", "react@17.0.2":
   "integrity" "sha512-gnhPt75i/dq/z3/6q/0asP78D0u592D5L1pd7M8P+dck6Fu/jJeL6iVVK23fptSUZj8Vjf++7wXA8UNclGQcbA=="
   "resolved" "https://registry.npmjs.org/react/-/react-17.0.2.tgz"
   "version" "17.0.2"
@@ -14447,23 +14436,9 @@
     "loose-envify" "^1.1.0"
     "object-assign" "^4.1.1"
 
-"react@^0.14.8 || ^15.0.1 || ^16.0.0 || ^17.0.1":
-  "version" "16.14.0"
-  dependencies:
-    "loose-envify" "^1.1.0"
-    "object-assign" "^4.1.1"
-    "prop-types" "^15.6.2"
-
-"react@^0.14.9 || ^15.3.0 || ^16.0.0-rc || ^16.0", "react@^15.3.0 || ^16.0.0 || ^17.0.0", "react@^16.14.0", "react@^16.6.0", "react@>=0.14.0", "react@>=0.14.0 <17.0.0", "react@0.14.x || ^15.0.0 || ^16.0.0 || ^17.0.0":
+"react@^0.14.9 || ^15.3.0 || ^16.0.0-rc || ^16.0", "react@^15.3.0 || ^16.0.0 || ^17.0.0", "react@^16.14.0", "react@^16.6.0", "react@^16.8.3", "react@>=0.14.0", "react@>=0.14.0 <17.0.0", "react@0.14.x || ^15.0.0 || ^16.0.0 || ^17.0.0":
   "integrity" "sha512-0X2CImDkJGApiAlcf0ODKIneSwBPhqJawOa5wCtKbu7ZECrmS26NvtSILynQ66cgkT/RJ4LidJOc3bUESwmU8g=="
   "resolved" "https://registry.npmjs.org/react/-/react-16.14.0.tgz"
-  "version" "16.14.0"
-  dependencies:
-    "loose-envify" "^1.1.0"
-    "object-assign" "^4.1.1"
-    "prop-types" "^15.6.2"
-
-"react@>=16.3.0":
   "version" "16.14.0"
   dependencies:
     "loose-envify" "^1.1.0"
@@ -16970,7 +16945,7 @@
   "resolved" "https://registry.npmjs.org/typedarray/-/typedarray-0.0.6.tgz"
   "version" "0.0.6"
 
-"typescript@^3.2.1 || ^4", "typescript@^4.4.4", "typescript@>= 2.7", "typescript@>= 3.x", "typescript@>= 4.3.x":
+"typescript@^3.2.1 || ^4", "typescript@^4.4.4", "typescript@>= 2.7", "typescript@>= 3.x", "typescript@>= 4.3.x", "typescript@>=2.8.0 || >= 3.2.0-dev || >= 3.3.0-dev || >= 3.4.0-dev || >= 3.5.0-dev || >= 3.6.0-dev || >= 3.6.0-beta || >= 3.7.0-dev || >= 3.7.0-beta":
   "integrity" "sha512-DqGhF5IKoBl8WNf8C1gu8q0xZSInh9j1kJJMqT3a94w1JzVaBU4EXOSMrz9yDqMT0xt3selp83fuFMQ0uzv6qA=="
   "resolved" "https://registry.npmjs.org/typescript/-/typescript-4.4.4.tgz"
   "version" "4.4.4"
@@ -16978,9 +16953,6 @@
 "typescript@^3.7.3", "typescript@>=2.4.0", "typescript@>=3.4 <4.0":
   "integrity" "sha512-w6fIxVE/H1PkLKcCPsFqKE7Kv7QUwhU8qQY2MueZXWx5cPZdwFupLgKK3vntcK98BtNHZtAF4LA/yl2a7k8R6Q=="
   "resolved" "https://registry.npmjs.org/typescript/-/typescript-3.9.10.tgz"
-  "version" "3.9.10"
-
-"typescript@>=2.8.0 || >= 3.2.0-dev || >= 3.3.0-dev || >= 3.4.0-dev || >= 3.5.0-dev || >= 3.6.0-dev || >= 3.6.0-beta || >= 3.7.0-dev || >= 3.7.0-beta":
   "version" "3.9.10"
 
 "ua-parser-js@^0.7.18":

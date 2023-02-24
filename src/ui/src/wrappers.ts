@@ -2,7 +2,7 @@
  * web pages wrappers
  ****************************************************/
 
-import {styled} from "../../theme";
+import {device, styled} from "../../theme";
 
 export const wrapperWeb = styled('div') <{
 
@@ -36,7 +36,28 @@ export const wrapperSubheader = styled('div')<{
 export const wrapperMain = styled('div')<{
 
 }>`
+  display: flex;
+`
 
+export const wrapperContent = styled('div')<{
+
+}>`
+  width: 600px;
+  margin: 0 15px;
+  ${device.largeDesktop`
+      margin: 15px 100px;
+    `}
+`
+
+export const wrapperLeftSide = styled('div')<{
+  hide?: boolean    
+}>`
+  display: ${({hide})=> hide? "none" : "block"}
+`
+export const wrapperRightSide = styled('div')<{
+  hide?: boolean
+}>`
+  display: ${({hide})=> hide? "none" : "block"}
 `
 
 export const wrapperFooter = styled('div')<{

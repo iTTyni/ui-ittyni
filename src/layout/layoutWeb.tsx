@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { useTheme } from 'styled-components';
+import { Slider } from '../components/slider';
 import * as UI from '../ui';
 import Header from './header/header';
 import { Search } from './search/search';
@@ -21,7 +22,15 @@ export const LayoutWeb: React.VFC<any> = () => {
                     <Search />
                 </UI.Wrappers.wrapperSubheader>
                 <UI.Wrappers.wrapperMain>
-                    main
+                    <UI.Wrappers.wrapperLeftSide hide>
+                        left side wrapper
+                    </UI.Wrappers.wrapperLeftSide>
+                    <UI.Wrappers.wrapperContent>
+                        <Slider />
+                    </UI.Wrappers.wrapperContent>
+                    <UI.Wrappers.wrapperRightSide>
+                        right side content
+                    </UI.Wrappers.wrapperRightSide>
                 </UI.Wrappers.wrapperMain>
                 <UI.Wrappers.wrapperFooter>
                     footer
