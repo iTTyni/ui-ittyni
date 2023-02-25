@@ -7,10 +7,10 @@ const images = [
           "https://theordinary.com/dw/image/v2/BFKJ_PRD/on/demandware.static/-/Sites-deciem-master/default/dwb5457f50/Images/products/The%20Ordinary/rdn-the-bright-set.png?sw=900&sh=900&sm=fit",
           "https://raw.githubusercontent.com/quanlieu/react-image-show/master/dev/images/m05.png"
         ]
-export function Slider(){
+export function Slider({fixedHeight}:any){
   const [activeSliderIndex, setActiveSliderIndex] = React.useState<number>(0)
   return(
-    <div>
+    <div style={{height: `${fixedHeight}px`}}>
       <StyledSlideShow className="slide-show slide-show-size">
         <Images 
           imageSource={images[activeSliderIndex]}
@@ -37,4 +37,6 @@ const StyledSlideShow = styled('div')`
   margin: auto;
   position: relative;
   width: 100%;
+  height: inherit;
+  background-color: 
 `

@@ -42,10 +42,12 @@ export const wrapperMain = styled('div')<{
 export const wrapperContent = styled('div')<{
 
 }>`
-  width: 600px;
+  width: 70%;
   margin: 0 15px;
+  height: 90vh;
+  display: flex;
   ${device.largeDesktop`
-      margin: 15px 100px;
+      margin: 15px 15px 15px 15%;
     `}
 `
 

@@ -26,7 +26,10 @@ export const LayoutWeb: React.VFC<any> = () => {
                         left side wrapper
                     </UI.Wrappers.wrapperLeftSide>
                     <UI.Wrappers.wrapperContent>
-                        <Slider />
+                        <div style={{width: '630px', height: "630px"}}>
+                            <Slider fixedHeight={630} />
+                        </div>
+                        <div>description and price</div>
                     </UI.Wrappers.wrapperContent>
                     <UI.Wrappers.wrapperRightSide>
                         right side content
