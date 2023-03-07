@@ -68,8 +68,8 @@ const TableWidthoutHeaderExample : Story = ({tableArgs, bodyArgs, rowArgs, cellA
  <StyledTable {...tableArgs}>
     <StyledTbody {...bodyArgs}>
       <StyledRow {...rowArgs}>
-        <StyledCell {...cellArgs}>data 1</StyledCell>
-        <StyledCell {...cellArgs}>data 2</StyledCell>
+        <StyledCell {...cellArgs} width='40%' >data 1</StyledCell>
+        <StyledCell {...cellArgs} width='60%' >data 2</StyledCell>
       </StyledRow>
     </StyledTbody>
   </StyledTable> 
@@ -87,7 +87,9 @@ TableWithoutHeader.args = {
     bgColor: '#f6f9fc',
     display: 'flex'
   },
-  cellArgs: {}
+  cellArgs: {
+    
+  }
 }
 
 
