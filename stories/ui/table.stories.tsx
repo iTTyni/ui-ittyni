@@ -58,8 +58,8 @@ const TableWidthHeaderExample : Story = args =>
     </StyledThead>
     <StyledTbody>
       <StyledRow height='40px' bgColor='#f6f9fc'>
-        <StyledCell>data 1</StyledCell>
-        <StyledCell>data 2</StyledCell>
+        <StyledCell width='20%'>data 1</StyledCell>
+        <StyledCell width='80%'>data 2</StyledCell>
       </StyledRow>
     </StyledTbody>
   </StyledTable> 
