@@ -1,5 +1,5 @@
 import * as React from 'react'
-import {Card} from '../../../src/components/card';
+import {Card} from '../../../src/components';
 import {Meta, Story} from '@storybook/react';
 
 const meta : Meta = {

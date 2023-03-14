@@ -4,3 +4,6 @@ export * from './card/cardlist'
 // dropdowns
 export * from './dropdowns/dropdownMenu'
 
+// modal
+export * from './modal/modal'
+
