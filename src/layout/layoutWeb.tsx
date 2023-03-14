@@ -5,9 +5,13 @@ import * as UI from '../ui';
 import Header from './header/header';
 import { Search } from './search/search';
 
-export const LayoutWeb: React.VFC<any> = () => {
+
+
+export const LayoutWeb: React.FC<any> = () => {
 
     const theme = useTheme();
+
+   
 
     console.log(theme);
 
@@ -19,21 +23,21 @@ export const LayoutWeb: React.VFC<any> = () => {
                     <Header/>
                 </UI.Wrappers.wrapperHeader>
                 <UI.Wrappers.wrapperSubheader>
-                    <Search />
+                    {/* <Search /> */}
                 </UI.Wrappers.wrapperSubheader>
                 <UI.Wrappers.wrapperMain>
                     <UI.Wrappers.wrapperLeftSide hide>
-                        left side wrapper
+                        {/* left side wrapper */}
                     </UI.Wrappers.wrapperLeftSide>
                     <UI.Wrappers.wrapperContent>
-                        <Slider />
+                        {/* <Slider /> */}
                     </UI.Wrappers.wrapperContent>
                     <UI.Wrappers.wrapperRightSide>
-                        right side content
+                        {/* right side content */}
                     </UI.Wrappers.wrapperRightSide>
                 </UI.Wrappers.wrapperMain>
                 <UI.Wrappers.wrapperFooter>
-                    footer
+                    {/* footer */}
                 </UI.Wrappers.wrapperFooter>
             </UI.Wrappers.wrapperWeb>
         </>

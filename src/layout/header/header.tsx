@@ -1,10 +1,6 @@
 import * as React from 'react';
 import { Link } from 'react-router-dom';
 
-
-
-
-
 const Header: React.FC<any> = ({Logo, LeftMenu, MiddleMenu}) => {
  
   return (
@@ -34,7 +30,7 @@ const HeaderLogo = () => {
   return (
     <div style={{ display: "flex", background: "red" }}>
       {/* Logo */}
-      <div>iTTyni</div>
+      <div>i<span style={{color: "red"}}>TT</span>yni</div>
     </div>
   )
 }
@@ -48,6 +44,3 @@ const HeaderLinks: React.FC<any> = () => {
   )
 }
 // header links
-
-
-
