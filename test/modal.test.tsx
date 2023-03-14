@@ -1,6 +1,6 @@
 import React from 'react';
 import * as ReactDOM from 'react-dom';
-import Modal from '../src/components/modal/index'
+import Modal from '../src/components/modal/modal'
 
 describe('Thing', () => {
   it('renders without crashing', () => {

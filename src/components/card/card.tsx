@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {StyledCardContainer} from '../../../ui'
+import {StyledCardContainer} from '../../ui'
 
 export const Card: React.VFC<any>= ({})=> {
     return (
