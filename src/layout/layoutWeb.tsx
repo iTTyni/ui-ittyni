@@ -1,11 +1,11 @@
 import * as React from 'react';
 import { useTheme } from 'styled-components';
-import { Slider } from '../components/slider';
+import { Slider } from '../components';
 import * as UI from '../ui';
 import Header from './header/header';
 import { Search } from './search/search';
 
-export const LayoutWeb: React.VFC<any> = () => {
+export const LayoutWeb: React.FC<any> = () => {
 
     const theme = useTheme();
 

@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 
-export const CardList: React.VFC<any> = ({ }) => {
+export const CardList: React.FC<any> = ({ }) => {
 
 
     return (

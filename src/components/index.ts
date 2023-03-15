@@ -7,3 +7,9 @@ export * from './dropdowns/dropdownMenu'
 // modal
 export * from './modal/modal'
 
+// slider 
+export * from './slider/Slider'
+export * from './slider/arrows'
+export * from './slider/images'
+export * from './slider/indicators'
+export * from './slider/thumbnails'

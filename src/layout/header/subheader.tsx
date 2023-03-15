@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-export const Subheader: React.VFC<any> = ({ }) => {
+export const Subheader: React.FC<any> = ({ }) => {
 
 
     return (

@@ -2,7 +2,7 @@ import * as React from 'react';
 
 
 
-export const DataTable: React.VFC<any> = ({ }) => {
+export const DataTable: React.FC<any> = ({ }) => {
 
     return (
 

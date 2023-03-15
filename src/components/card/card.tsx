@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {StyledCardContainer} from '../../ui'
 
-export const Card: React.VFC<any>= ({})=> {
+export const Card: React.FC<any>= ({})=> {
     return (
         <StyledCardContainer>
             <div className="card-body">
