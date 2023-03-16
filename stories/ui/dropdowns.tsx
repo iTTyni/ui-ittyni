@@ -1,6 +1,6 @@
 import * as React from 'react';
 import {Meta, Story} from '@storybook/react'
-import { DropdownMenuStyle } from '../../src/ui';
+import { DropdownMenuStyle } from '../..';
 
 const meta : Meta = {
     title: 'ui/dropdowns',

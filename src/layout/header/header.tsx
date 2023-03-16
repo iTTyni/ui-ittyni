@@ -32,9 +32,9 @@ export default Header;
 const HeaderLogo = () => {
 
   return (
-    <div style={{ display: "flex", background: "red" }}>
+    <div style={{ display: "flex"}}>
       {/* Logo */}
-      <div>iTTyni</div>
+      <div>i<span style={{ color: "red" }}>TT</span><span>yni</span></div>
     </div>
   )
 }

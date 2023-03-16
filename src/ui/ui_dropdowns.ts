@@ -1,4 +1,4 @@
-import { styled } from "../../theme";
+import { styled } from "../..";
 
 export const DropdownMenuStyle = styled('ul')<{
 

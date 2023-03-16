@@ -1,4 +1,4 @@
-import {styled, IThemeInterface} from '../../theme';
+import {styled, IThemeInterface} from '../..';
 
 export const StyledCardContainer = styled('div')<{
   theme: IThemeInterface

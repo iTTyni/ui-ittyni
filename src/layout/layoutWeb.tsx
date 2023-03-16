@@ -1,7 +1,13 @@
 import * as React from 'react';
 import { useTheme } from 'styled-components';
 import { Slider } from '../components';
-import * as UI from '../ui';
+import { 
+    GlobalStyles, WrapperWeb, 
+    WrapperHeader, WrapperSubheader,
+    WrapperMain, WrapperLeftSide,
+    WrapperContent, WrapperRightSide,
+    WrapperFooter
+} from '../..';
 import Header from './header/header';
 import { Search } from './search/search';
 
@@ -9,23 +15,21 @@ export const LayoutWeb: React.FC<any> = () => {
 
     const theme = useTheme();
 
-    console.log(theme);
-
     return (
         <>
-            <UI.GlobalStyles />
-            <UI.Wrappers.wrapperWeb>
-                <UI.Wrappers.wrapperHeader>
+            <GlobalStyles />
+            <WrapperWeb>
+                <WrapperHeader>
                     <Header />
-                </UI.Wrappers.wrapperHeader>
-                <UI.Wrappers.wrapperSubheader>
+                </WrapperHeader>
+                <WrapperSubheader>
                     <Search />
-                </UI.Wrappers.wrapperSubheader>
-                <UI.Wrappers.wrapperMain>
-                    <UI.Wrappers.wrapperLeftSide hide>
+                </WrapperSubheader>
+                <WrapperMain>
+                    <WrapperLeftSide hide>
                         left side wrapper
-                    </UI.Wrappers.wrapperLeftSide>
-                    <UI.Wrappers.wrapperContent>
+                    </WrapperLeftSide>
+                    <WrapperContent>
                         <div style={{ width: '60%', height: "630px" }}>
                             <Slider fixedHeight={630} />
                         </div>
@@ -103,15 +107,15 @@ export const LayoutWeb: React.FC<any> = () => {
 
                             </div>
                         </div>
-                    </UI.Wrappers.wrapperContent>
-                    <UI.Wrappers.wrapperRightSide hide>
+                    </WrapperContent>
+                    <WrapperRightSide hide>
                         right side content
-                    </UI.Wrappers.wrapperRightSide>
-                </UI.Wrappers.wrapperMain>
-                <UI.Wrappers.wrapperFooter>
+                    </WrapperRightSide>
+                </WrapperMain>
+                <WrapperFooter>
                     footer
-                </UI.Wrappers.wrapperFooter>
-            </UI.Wrappers.wrapperWeb>
+                </WrapperFooter>
+            </WrapperWeb>
         </>
 
     )

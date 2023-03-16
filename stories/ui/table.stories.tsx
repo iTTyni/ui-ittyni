@@ -1,6 +1,6 @@
 import * as React from 'react';
 import {Meta, Story} from '@storybook/react';
-import {StyledTable, StyledThead, StyledTbody, StyledRow, StyledCell, StyledHeadCell} from '../../src/ui';
+import {StyledTable, StyledThead, StyledTbody, StyledRow, StyledCell, StyledHeadCell} from '../../';
 
 const meta : Meta = {
   title : 'ui/table',

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {StyledCardContainer} from '../../ui'
+import {StyledCardContainer} from '../../../'
 
 export const Card: React.FC<any>= ({})=> {
     return (

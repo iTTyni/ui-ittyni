@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "../../theme";
+import { createGlobalStyle } from "../..";
 
 
 export const GlobalStyles = createGlobalStyle`

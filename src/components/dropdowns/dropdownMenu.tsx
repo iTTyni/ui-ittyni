@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { DropdownMenuStyle } from '../../ui'
+import { DropdownMenuStyle } from '../../../'
 
 export const DropdownMenu: React.FC<{title?: string, footer?: any, setOpen?: any}>= ({title, footer})=>{
 
