@@ -2,7 +2,7 @@
  * web pages wrappers
  ****************************************************/
 
-import {device, styled} from "../..";
+import {device, styled} from "../theme";
 
 export const WrapperWeb = styled('div') <{
 

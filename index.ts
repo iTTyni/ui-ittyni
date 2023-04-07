@@ -9,7 +9,13 @@ export * from './src/ui/ui_wrappers'
 export * from './src/ui/ui_cards'
 export * from './src/ui/ui_table';
 export * from './src/ui/ui_dropdowns'
-
+export * from './src/ui/ui_globals';
+// layout
+export * from './src/layout/header/header'
+export * from './src/layout/header/subheader'
+export * from './src/layout/sides/adminSidebar'
+export * from './src/layout/sides/webSidebar'
+export * from './src/layout/sides/webRightbar'
 // components
 // cards
 export * from './src/components/card/card'
