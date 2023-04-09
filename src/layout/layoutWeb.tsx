@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { useTheme } from 'styled-components';
-import { Slider } from '../components';
+import { Slider } from '../..';
 import { 
     GlobalStyles, WrapperWeb, 
     WrapperHeader, WrapperSubheader,
@@ -8,7 +8,7 @@ import {
     WrapperContent, WrapperRightSide,
     WrapperFooter
 } from '../..';
-import Header from './header/header';
+import {Header} from '../..';
 import { Search } from './search/search';
 
 export const LayoutWeb: React.FC<any> = () => {

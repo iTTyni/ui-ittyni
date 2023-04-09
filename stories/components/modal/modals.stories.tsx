@@ -1,6 +1,6 @@
 import React, { Children } from 'react';
 import { Meta, Story } from '@storybook/react';
-import  {Modal}  from '../../../src/components';
+import  {Modal}  from '../../../';
 const meta: Meta = {
   title: 'components/modal',
   component: Modal

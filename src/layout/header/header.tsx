@@ -43,7 +43,7 @@ export const Header: React.FC<any> = ({ user }) => {
 
       {/* right menu */}
       {user && <div style={{padding: '5px 15px'}}>
-        <Link to={`/admin/${user.email.split('@')[0]}`}><img src={user.picture} height='25px' width='25px'/></Link>
+        <Link to={`/admin/${user?.email?.split('@')[0]}`}><img src={user.picture} height='25px' width='25px'/></Link>
         </div>}
       {!user && <div><AuthIcon width='25px' height='25px' /></div>}
     </WrapperHeader>

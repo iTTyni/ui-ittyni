@@ -1,6 +1,6 @@
 import { Meta, Story } from '@storybook/react';
 import * as React from 'react';
-import { CardList } from '../../../src/components';
+import { CardList } from '../../../';
 
 
 
