@@ -1,7 +1,7 @@
 import * as React from 'react';
 import * as ui from './styles'
 
-const Modal: React.FunctionComponent<any> = ({ title, openModal, PreviewTitle }) => {
+export const Modal: React.FunctionComponent<any> = ({ title, openModal, PreviewTitle }) => {
   
     return (
         <ui.Modal>
@@ -86,4 +86,3 @@ const AddExamDetails: React.FC<any> = ({  }) => {
         </li>
     )
 }
-export default Modal;

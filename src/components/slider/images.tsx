@@ -24,6 +24,7 @@ const StyledImages = styled('div')`
   overflow: hidden;
   margin: auto;
   width: 100%;
+  height: inherit;
 
   .ss-images-track {
     white-space : nowrap;
@@ -42,9 +43,11 @@ const StyledImages = styled('div')`
     vertial-align : top;
     transition: all 500ms ease-out;
     width: inherit;
+    height: inherit;
 
     & > img {
       width : inherit;
+      height: inherit;
     }
   }
 

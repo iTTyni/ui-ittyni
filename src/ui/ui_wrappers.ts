@@ -2,9 +2,9 @@
  * web pages wrappers
  ****************************************************/
 
-import {device, styled} from "../../theme";
+import {device, styled} from "../theme";
 
-export const wrapperWeb = styled('div') <{
+export const WrapperWeb = styled('div') <{
 
 }>`
     height : 100%;
@@ -13,7 +13,7 @@ export const wrapperWeb = styled('div') <{
     background : ${({ theme }) => theme.color.defaultColor};
 `
 
-export const wrapperHeader = styled('div')<{
+export const WrapperHeader = styled('div')<{
 
 }>`
     width: 100%;
@@ -27,40 +27,42 @@ export const wrapperHeader = styled('div')<{
     box-shadow: 0 3px 6px rgb(0 0 0 / 4%);
 `
 
-export const wrapperSubheader = styled('div')<{
+export const WrapperSubheader = styled('div')<{
 
 }>`
     
 `
 
-export const wrapperMain = styled('div')<{
+export const WrapperMain = styled('div')<{
 
 }>`
   display: flex;
 `
 
-export const wrapperContent = styled('div')<{
+export const WrapperContent = styled('div')<{
 
 }>`
-  width: 600px;
+  width: 70%;
   margin: 0 15px;
+  height: 90vh;
+  display: flex;
   ${device.largeDesktop`
-      margin: 15px 100px;
+      margin: 15px 15px 15px 15%;
     `}
 `
 
-export const wrapperLeftSide = styled('div')<{
+export const WrapperLeftSide = styled('div')<{
   hide?: boolean    
 }>`
-  display: ${({hide})=> hide? "none" : "block"}
+  display: ${({hide}:any)=> hide? "none" : "block"}
 `
-export const wrapperRightSide = styled('div')<{
+export const WrapperRightSide = styled('div')<{
   hide?: boolean
 }>`
-  display: ${({hide})=> hide? "none" : "block"}
+  display: ${({hide}:any)=> hide? "none" : "block"}
 `
 
-export const wrapperFooter = styled('div')<{
+export const WrapperFooter = styled('div')<{
 
 }>`
     width: 100%;

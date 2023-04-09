@@ -1,6 +1,12 @@
 import React from 'react'
 import ReactDOM from "react-dom";
+import { ThemeProvider } from 'styled-components';
+import {lightTheme} from './theme';
+import { LayoutWeb } from './layout';
 
-export const App=()=><div>home pages</div>
 const rootElement = document.getElementById('root')
-ReactDOM.render(<App />, rootElement);
+ReactDOM.render(
+    <ThemeProvider theme={lightTheme}>
+        <LayoutWeb/>
+    </ThemeProvider>
+    , rootElement);
