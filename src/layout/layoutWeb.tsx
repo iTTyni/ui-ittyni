@@ -14,7 +14,7 @@ import { Search } from './search/search';
 export const LayoutWeb: React.FC<any> = () => {
 
     const theme = useTheme();
-
+    
     return (
         <>
             <GlobalStyles />
@@ -116,6 +116,7 @@ export const LayoutWeb: React.FC<any> = () => {
                     footer
                 </WrapperFooter>
             </WrapperWeb>
+
         </>
 
     )

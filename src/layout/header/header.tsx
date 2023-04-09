@@ -8,10 +8,7 @@ import { ReactComponent as Xray } from '../../assets/icons/x-ray.svg';
 import { ReactComponent as Stethoscope } from '../../assets/icons/stethoscope.svg';
 import { ReactComponent as Medicine } from '../../assets/icons/medicin.svg';
 
-
-
 export const Header: React.FC<any> = ({ user }) => {
-
   return (
     <WrapperHeader>
       {/* left menu */}
@@ -52,5 +49,3 @@ export const Header: React.FC<any> = ({ user }) => {
     </WrapperHeader>
   );
 };
-
-export default Header;
