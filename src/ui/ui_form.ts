@@ -5,16 +5,18 @@ export const InputStyled = styled('input')<{
     placeholderBg? : string
     border ? : string
     customDisabledCSS ? : string
+    width?: string
 }>
 `
     min-height : 10px;
+    width: ${({width})=>width?width : '100%'};
     outline : 0;
     padding : 2px 0;
     margin : 5px;
     background-color : white;
     color : #000000;
     font-weight: 700;
-    border : ${({border})=>border?border : 'none'}
+    border : ${({border})=>border?border : 'none'};
 
     ${device.desktop`
 

@@ -1,53 +1,19 @@
 import * as React from 'react';
-import { ModalHeader, ModalContent, ModalList, Bubble, ModalListData } from '../../../..';
+import { ModalHeader, ModalContent, ModalListData, ModalContainer, Bubble } from '../../../..';
+import { useDraggable } from '../../../hooks/useDraggeable';
 
 
-export const Modal: React.FunctionComponent<any> = ({ title, openModal, PreviewTitle }) => {
-  
+
+
+export const Modal: React.FunctionComponent<any> = ({ header, openModal, PreviewTitle, children }) => {
+    const el: any = React.useRef();
+    useDraggable(el);
     return (
-        <Modal>
-            <ModalHeader>
-                <h2>{title}</h2>
-                <span onClick={openModal}>X</span>
-            </ModalHeader>
-            <ModalContent>
-                <div style={{ display: "flex" }}>
-                    {/* first data column */}
-                    <div style={{ width: '60%', padding: '5px 0', display: "flex", flexDirection: "column" }}>
-                        <div>
-                            {/* search */}
-                            <span>
-                                <input
-                                    style={{ width: '90%', padding: '5px 0' }}
-                                    onChange={({  }: any) => {}}
-                                />
-                                <button onClick={() => {}}>
-                                    <i className="fa fa-search" style={{ padding: '6px' }}></i>
-                                </button>
-                            </span>
-                            {/* filters */}
-                            <Filters />
-
-                            {/* data list */}
-                            <ModalList>
-                                    <li>
-                                        <span style={{ fontSize: "14px" }}>
-                                            <input type="checkbox" onChange={({  }: any) => {}}
-                                                checked={false} />
-                                        </span>
-                                        <span style={{ fontSize: "14px", width: "80px" }}>mnemonic</span>
-                                        <span style={{ fontSize: "12px" }}>name</span>
-                                    </li>
-                                )
-                            </ModalList>
-                        </div>
-                    </div>
-
-                    <Previews PreviewTitle={PreviewTitle}  />
-
-                </div>
-            </ModalContent>
-        </Modal>
+        <ModalContainer >
+            <span onClick={openModal} className='close'><i className='fas fa-times-circle'/></span>
+            <ModalHeader ref={el}>{header}</ModalHeader>
+            <ModalContent>{children}</ModalContent>
+        </ModalContainer>
     );
 };
 
@@ -55,8 +21,8 @@ export const Modal: React.FunctionComponent<any> = ({ title, openModal, PreviewT
 const Filters: React.FC<any> = () => {
 
     return (
-        <div style={{ padding: "10px", display: "flex", justifyContent: "space-evenly", flexWrap: "wrap" }}>
-            <Bubble onClick={({  }: any) => {}}>All</Bubble>
+        <div style={{ padding: "10px", display: "flex", flexWrap: "wrap" }}>
+            <Bubble onClick={({ }: any) => { }}>All</Bubble>
         </div>
     )
 }
@@ -80,7 +46,7 @@ const Previews: React.FC<any> = ({ PreviewTitle, selectedExam }) => {
     )
 }
 
-const AddExamDetails: React.FC<any> = ({  }) => {
+const AddExamDetails: React.FC<any> = ({ }) => {
     return (
         <li >
 

@@ -1,23 +1,31 @@
 import {styled} from "../.."
 
 export const ModalContainer = styled('div')<{
-    width?:number, height?:number
+    width?:number, height?:string
     left?:number, top?:number
  }>`
     border-radius: 8px;
     position: fixed;
     z-index: 999;
-    height: ${({height})=>height ? height : 50}%;
+    height: ${({height})=>height ? height : "auto"};
     width: ${({width})=>width ? width : 70}%;
     left: ${({left})=>left ? left : 15}%;
     top: ${({top})=>top ? top : 20}%;
     background-color: white;
     box-shadow: 0 0 20px rgba(21, 21, 29, 0.2);
+    .close {
+        position: absolute;
+        font-size: x-large;
+        color: red;
+        right: 0;
+        cursor: pointer;
+    }
 `
 export const ModalHeader = styled('div')`
     padding: 15px 5px;
     display : flex;
     justify-content : space-between;
+    cursor: pointer;
     &>span {
         color: red;
         font-size: 25px;
@@ -29,7 +37,6 @@ export const ModalHeader = styled('div')`
 export const ModalContent = styled('div')<{minHeight?:number}>`
     margin: 10px 10px 25px 10px;
     min-height : ${({minHeight})=>minHeight? minHeight : 340}px;
-    display: flex;
 `
 export const ModalLeftSide = styled('div')<{width?: string}>`
     width: ${({width}:any)=> width? width: '25%'}

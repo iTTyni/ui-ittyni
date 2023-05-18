@@ -6,7 +6,7 @@ interface IPanelProps {
     subHeader?: any
     children: JSX.Element
     mainTitle?: string
-    rightMenu?: any[]
+    rightMenu?: any
     leftMenu?: any[]
     footer?: JSX.Element
 }
@@ -22,13 +22,13 @@ export const Panel: React.FC<IPanelProps> = ({
         <div className='content'>
             {
               mainTitle&&
-              <>
+              <div className='content_header'>
                 <h2 className='title'>{mainTitle}</h2>
-                <hr />
-              </>
+                {rightMenu&&<div className='leftMenu'>{rightMenu}</div>}
+              </div>
             }
               <div className='content_body' style={{display: rightMenu||leftMenu ? 'flex': 'block'}} >
-                {rightMenu&&<div className='leftMenu'>left menu</div>}
+               
                 <div className='main'>{children}</div>
                 {leftMenu&&<div className='rightMenu'>right menu</div>}
             </div>

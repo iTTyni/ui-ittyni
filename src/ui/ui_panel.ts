@@ -21,6 +21,14 @@ export const PanelContainer = styled('div')<{
     .content {
 
     }
+    .content_header {
+        display: flex;
+        width: inherit;
+        justify-content: space-between;
+        border-bottom: 1px solid lightgray;
+        align-items: center;
+        i {cursor: pointer;}
+    }
     .title {
         color: #000000;
         font-size : 1rem;

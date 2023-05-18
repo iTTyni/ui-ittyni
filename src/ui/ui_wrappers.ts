@@ -56,6 +56,21 @@ export const WrapperLeftSide = styled('div')<{
 }>`
   display: ${({hide}:any)=> hide? "none" : "block"}
 `
+export const WrapperLeftSideHeader = styled('div')<{}>`
+  display: flex;
+  justifyContent: flex-start;
+  paddingBottom: 10px;
+  marginBottom: 10px;
+  borderBottom: 1px solid #f1f1f1;
+  alignItems: center;
+`
+export const WrapperLeftSideFouter = styled('div')<{}>`
+  position: absolute; 
+  bottom: 60px; 
+  display: flex; 
+  flex-direction: column; 
+`
+
 export const WrapperRightSide = styled('div')<{
   hide?: boolean
 }>`
