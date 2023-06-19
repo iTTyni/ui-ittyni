@@ -22,7 +22,7 @@ const Filters: React.FC<any> = () => {
 
     return (
         <div style={{ padding: "10px", display: "flex", flexWrap: "wrap" }}>
-            <Bubble onClick={({ }: any) => { }}>All</Bubble>
+            <Bubble onClick={() => { }}>All</Bubble>
         </div>
     )
 }

@@ -5,7 +5,7 @@ export const WebRightbar: React.FC<any> = ({ }) => {
 
     return (
         <WrapperRightSide>
-            left sid bar
+            
         </WrapperRightSide>
     )
 }

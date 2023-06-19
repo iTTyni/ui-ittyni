@@ -8,7 +8,7 @@ import { StyledSelect } from '../../../../'
 export const Select: React.FC<{
     name: string,
     onChange: (e: any) => void,
-    options: { value: string, name: String, otherOptions?: any }[],
+    options: { value: string, name: string, otherOptions?: any }[],
     initialValue?: string
 }> = ({ name, onChange, options, initialValue }) => {
 
@@ -18,9 +18,9 @@ export const Select: React.FC<{
             name={name}
             onChange={onChange}
         >
-            <option disabled selected={!initialValue}>----------</option>
+            <option disabled selected={!initialValue} defaultValue={"------------"}>----------</option>
             {
-                options.map((c: any) =>
+                options?.map((c: any) =>
                     <option 
                         value={c.value} 
                         key={c.value} 

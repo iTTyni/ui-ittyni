@@ -22,7 +22,7 @@ export const ModalContainer = styled('div')<{
     }
 `
 export const ModalHeader = styled('div')`
-    padding: 15px 5px;
+    padding: 5px 5px;
     display : flex;
     justify-content : space-between;
     cursor: pointer;
@@ -134,23 +134,7 @@ export const ModalListData = styled('ul')`
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;
 `
-export const Bubble = styled('div')`
-    max-width: 180px;
-    padding: 2px 12px;
-    background-color: #f0f3fa;
-    border-radius: 14px;
-    box-sizing: border-box;
-    flex: none;
-    font-size: 16px;
-    line-height: 24px;
-    color: #131722;
-    cursor: default;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    width : fit-content;
-    cursor : pointer
-`
+
 export const ModalListMenu = styled('span')`
     float: right;
     color: gray;

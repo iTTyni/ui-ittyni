@@ -3,7 +3,7 @@ import {Meta, Story} from '@storybook/react'
 import { DropdownMenuStyle } from '../..';
 
 const meta : Meta = {
-    title: 'ui/dropdowns',
+    title: 'ui/dropdowns/dropdownMenu',
     component: DropdownMenuStyle
 }
 

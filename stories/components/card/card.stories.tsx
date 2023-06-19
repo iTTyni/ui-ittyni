@@ -9,9 +9,7 @@ const meta : Meta = {
 
 export default meta;
 
-
 const Template : Story = args => <Card {...args} />
-
 
 export const Default = Template.bind({});
 

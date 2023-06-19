@@ -4,7 +4,7 @@ import { DropdownMenu } from '../../..'
 
 
 const dropdownMeta: Meta = {
-    title: 'components/dropdowns/dropdownMenu',
+    title: 'components/dropdowns/dropdownList',
     component: DropdownMenu
 }
 
