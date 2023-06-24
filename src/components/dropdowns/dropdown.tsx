@@ -5,14 +5,14 @@ export const DropdownList: React.FC<{
     header?: any
     children?: any
     footer?: any
-    setOpen?: any
+    setClose?: any
     hideDropdown?: boolean
     customStyles?: {
         width: string
     }
 }> = ({ 
     customStyles, hideDropdown,
-    header, children, footer, setOpen 
+    header, children, footer, setClose 
 }) => {
 
     const ref: any = React.useRef<HTMLDivElement | null>();
@@ -20,7 +20,7 @@ export const DropdownList: React.FC<{
     React.useEffect(() => {
         const handleClickOutside = (event: any) => {
             if (ref?.current && !ref.current.contains(event.target)) {
-                setOpen(false);
+                setClose(true);
             }
         };
         document.addEventListener("mousedown", handleClickOutside);
@@ -63,9 +63,8 @@ export const DropdownListWithInput: React.FC<{
                     type="text" style={{width: '100%', minWidth: '200px'}}
                     onChange={inputConfig?.onChange}
                     onFocus={()=>setHide(false)}
-                    onBlur={()=>setHide(true)}
                 />
-                <DropdownList header={header} customStyles={{width: '100%'}} hideDropdown={hide}>
+                <DropdownList header={header} customStyles={{width: '100%'}} hideDropdown={hide} setClose={setHide}>
                     {children}
                 </DropdownList>
             </div>

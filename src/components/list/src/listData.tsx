@@ -1,26 +1,13 @@
 import * as React from 'react';
 import { Link } from 'react-router-dom';
-import { ListContainer } from '../../../..';
+import { ListContainerStyled, ListItemStyled } from '../../../..';
 
-/*
-    data : 
-    [
-        {key1: "data1", key2: "data2", key3: "data3"},
-        {key1: "data1", key2: "data2", key3: "data3"},
-        {key1: "data1", key2: "data2", key3: "data3"},
-        {key1: "data1", key2: "data2", key3: "data3"},
-        {key1: "data1", key2: "data2", key3: "data3"},
-        {key1: "data1", key2: "data2", key3: "data3"},
-        {key1: "data1", key2: "data2", key3: "data3"},
-    ]
-*/
-
-export const ListData: React.FC<any> = ({ data }) => {
+export const ListContainer: React.FC<any> = ({ data }) => {
 
 
     return (
-        <ListContainer noDecor>
-            {data && data.map((d: any) =>
+        <ListContainerStyled noDecor>
+            {data?.map((d: any) =>
                 <li key={d.link}>
                     <Link to={d.link}>
                         <div>
@@ -34,7 +21,22 @@ export const ListData: React.FC<any> = ({ data }) => {
                     </Link>
                 </li>
             )}
-        </ListContainer>
+        </ListContainerStyled>
     );
 };
+
+export const ListItem: React.FC<{
+    children?: any
+    customStyles?: {
+        display: any
+    }
+    [key : string]: any
+}> = ({children, customStyles})=>{
+    return(
+        <ListItemStyled {...customStyles}>
+            {children}
+        </ListItemStyled>
+    )
+}
+
 

@@ -37,11 +37,16 @@ export const Container = styled('ul')<{itemscope? : boolean, itemtype? : string}
     list-style-type: none;
     margin : 10px;
 `
-export const Item = styled.li`
-    display: flex;
-    background-color: #ffffff;
-    margin: 10px;
-    padding: 5px;
+export const ListItemStyled = styled('li')<{
+    backgroundColor?: string,
+    display?: any
+    margin?: string
+    padding?: string
+}>`
+    ${({display})=>display || 'display: flex'}
+    background-color: ${({backgroundColor})=>backgroundColor || '#ffffff'};
+    margin: ${({margin})=>margin|| '5px'};
+    padding: $({padding})=>padding|| '5px'};
     min-height : 70px;
     border-radius: 5px;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.2);
@@ -116,7 +121,7 @@ export const ItemOptionsFinance = styled.div`
         }
     }
 `
-export const ListContainer = styled('ul')<{noDecor: boolean, pd?:string, mg?:string}>`
+export const ListContainerStyled = styled('ul')<{noDecor: boolean, pd?:string, mg?:string}>`
     list-style-type: ${({noDecor})=>noDecor?'none':'auto'};
     ${({pd})=>pd&&`margin: ${pd}`}
     ${({mg})=>mg&&`margin: ${mg}`}
