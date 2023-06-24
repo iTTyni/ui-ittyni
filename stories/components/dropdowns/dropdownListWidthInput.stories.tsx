@@ -23,4 +23,8 @@ const dropdownMenuStory: Story = args =>
     
 export const Default = dropdownMenuStory.bind({})
 
-Default.args = {}
+Default.args = {
+    customStyles:{width: '400px'},
+    label: 'organizmes',
+
+}

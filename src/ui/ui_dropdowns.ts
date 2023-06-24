@@ -6,8 +6,8 @@ export const DropdownMenuStyle = styled('ul')<{
     list-decoration: none;
 `
 
-export const DropdownListStyled = styled('ul')<{
-
+export const DropdownListStyled = styled('div')<{
+    width?: string
 }>
 `
     position : absolute;
@@ -19,7 +19,7 @@ export const DropdownListStyled = styled('ul')<{
     background-color: white;
     border: 1px solid;
     display : ${({ hideMenu }: any) => hideMenu ? 'none' : 'block'};
-
+    width: ${({ width }: any) => width?width: '100%'};
     div {
         ul {
             margin: 0;
