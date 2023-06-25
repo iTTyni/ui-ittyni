@@ -1,5 +1,0 @@
-export * from './src/arrows'
-export * from './src/images'
-export * from './src/indicators'
-export * from './src/thumbnails'
-export * from './src/Slider'

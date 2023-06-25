@@ -1,6 +1,6 @@
 import * as React from 'react';
 import {Meta, Story} from '@storybook/react';
-import {StyledCardContainer, StyledCardSection} from '../../src/ui'
+import {StyledCardContainer, StyledCardSection} from '../..'
 
 const cardMeta : Meta = {
   title : 'ui/card',

@@ -1,5 +1,5 @@
 import * as React from 'react'
-import {Card} from '../../../src/components/card';
+import {Card} from '../../../';
 import {Meta, Story} from '@storybook/react';
 
 const meta : Meta = {
@@ -9,9 +9,7 @@ const meta : Meta = {
 
 export default meta;
 
-
 const Template : Story = args => <Card {...args} />
-
 
 export const Default = Template.bind({});
 
