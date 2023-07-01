@@ -10,14 +10,15 @@ export const Bubble: React.FC<{
     isSelected?: boolean
     isDisabled?: boolean
     bordered?: boolean
+    customStyles?: any
     onClick?: VoidFunction
-}> = ({ color, bgColor, children, selectedBgColor, isSelected, onClick, isDisabled, bordered }) => {
+}> = ({ customStyles,color, bgColor, children, selectedBgColor, isSelected, onClick, isDisabled, bordered }) => {
     return (
         <div style={{ position: "relative", margin: "5px", maxWidth: '180px', width:"fit-content" }}>
             <StyledBubble
                 color={color} bgColor={bgColor} selected={isSelected}
                 selectedBgColor={selectedBgColor} onClick={onClick}
-                bordered={bordered}
+                bordered={bordered} {...customStyles}
             >
                 {children}
             </StyledBubble>

@@ -1,14 +1,15 @@
-import { device, styled } from "../..";
+import { device, lightTheme, styled } from "../..";
 
 export const InputStyled = styled('input')<{
     placeholderColor? : string
     placeholderBg? : string
-    border ? : string
+    border ? : boolean
     customDisabledCSS ? : string
     width?: string
+    minHeight?: number
 }>
 `
-    min-height : 10px;
+    min-height : ${({minHeight})=>minHeight|| 10}px;
     width: ${({width})=>width?width : '100%'};
     outline : 0;
     padding : 2px 0;
@@ -16,15 +17,15 @@ export const InputStyled = styled('input')<{
     background-color : white;
     color : #000000;
     font-weight: 700;
-    border : ${({border})=>border?border : 'none'};
+    border : ${({border, theme})=>border?'1px solid '+theme.color.primaryColor : 'none'};
 
     ${device.desktop`
 
     `}
     
     ::placeholder {
-        background-color : ${({placeholderBg})=>placeholderBg ? placeholderBg : 'white'};
-        color : ${({placeholderColor})=>placeholderColor ? placeholderColor : '#000000'};
+        background-color : ${({placeholderBg, theme})=>placeholderBg ? placeholderBg : theme?.color.defaultColor};
+        color : ${({placeholderColor, theme})=>placeholderColor ? placeholderColor : theme?.color.secondaryColor};
         font-weight: 700;
     }
     

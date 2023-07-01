@@ -30,7 +30,7 @@ export const lightTheme: IThemeInterface = {
   },
   color: {
     defaultColor: "#ffffff",
-    primaryColor: "#ffffff",
+    primaryColor: "#e9e9eb",
     secondaryColor: "#2a2c39",
     thirdColor: "#F2F4F6",
     fourthColor: "#423030"

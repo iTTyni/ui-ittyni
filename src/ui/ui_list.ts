@@ -42,16 +42,19 @@ export const ListItemStyled = styled('li')<{
     display?: any
     margin?: string
     padding?: string
+    minHeight?: number
 }>`
     ${({display})=>display || 'display: flex'}
     background-color: ${({backgroundColor})=>backgroundColor || '#ffffff'};
     margin: ${({margin})=>margin|| '5px'};
-    padding: $({padding})=>padding|| '5px'};
-    min-height : 70px;
+    padding: ${({padding})=>padding|| '5px'};
+    min-height : ${({minHeight})=>minHeight || '20px'};
     border-radius: 5px;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.2);
     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-
+    :hover{
+        box-shadow: 0px 1px 5px 4px #00ACC1
+    }
     * {
         background : #ffffff;
     }
