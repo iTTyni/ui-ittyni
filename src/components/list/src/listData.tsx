@@ -31,9 +31,9 @@ export const ListItem: React.FC<{
         display: any
     }
     [key : string]: any
-}> = ({children, customStyles})=>{
+}> = ({children, customStyles, ...args})=>{
     return(
-        <ListItemStyled {...customStyles}>
+        <ListItemStyled {...customStyles} {...args}>
             {children}
         </ListItemStyled>
     )
