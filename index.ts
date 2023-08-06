@@ -19,6 +19,7 @@ export * from './src/ui/ui_search';
 export * from './src/layout/header/header'
 export * from './src/layout/header/subheader'
 export * from './src/layout/sides/adminSidebar'
+export * from './src/layout/sides/AccountMenu'
 export * from './src/layout/sides/webSidebar'
 export * from './src/layout/sides/webRightbar'
 // components
