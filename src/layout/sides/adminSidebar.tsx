@@ -1,6 +1,7 @@
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { WrapperLeftSide, WrapperLeftSideFouter, WrapperLeftSideHeader } from "../../ui/ui_wrappers"
+import { ExtensionsMenu } from "./AccountMenu";
 
 export const AdminSidebar: React.FC<any> = ({ user }) => {
 
@@ -21,6 +22,8 @@ export const AdminSidebar: React.FC<any> = ({ user }) => {
                         <li><Link to={`/admin/${user.email.split('@')[0]}/profile`}> Profile </Link></li>
                         <li><Link to={`/admin/${user.email.split('@')[0]}/settings`}> Settings </Link></li>
                     </ul>
+
+                    <ExtensionsMenu linkToExtManager={`/admin/${user.email.split('@')[0]}/addExtension`}/>
                     <WrapperLeftSideFouter>
                         <h5 style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
                             <span>Espaces</span>
@@ -31,7 +34,7 @@ export const AdminSidebar: React.FC<any> = ({ user }) => {
                         </Link>
                         {user?.accounts.map((s: any) =>
                             <>
-                                <Link to={`/space/${user?.email.split('@')[0]}/${s.labo?._id||s.space?._id}`}>
+                                <Link to={`/space/${user?.email.split('@')[0]}/${s.labo?._id||s.space?._id}`} key={s.labo?._id||s.space?._id}>
                                     <i className="fas fa-sign-out-alt" /> {s.labo?.account.name||s.space?.account.name}
                                 </Link>
                             </>

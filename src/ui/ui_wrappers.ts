@@ -47,7 +47,7 @@ export const WrapperContent = styled('div')<{
   height: 90vh;
   display: flex;
   ${device.largeDesktop`
-      margin: 15px 15px 15px 15%;
+      margin: 15px;
     `}
 `
 

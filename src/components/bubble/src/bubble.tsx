@@ -11,7 +11,7 @@ export const Bubble: React.FC<{
     isDisabled?: boolean
     bordered?: boolean
     customStyles?: any
-    onClick?: VoidFunction
+    onClick?: any
 }> = ({ customStyles,color, bgColor, children, selectedBgColor, isSelected, onClick, isDisabled, bordered }) => {
     return (
         <div style={{ position: "relative", margin: "5px", maxWidth: '180px', width:"fit-content" }}>

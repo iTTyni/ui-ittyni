@@ -8,8 +8,8 @@ export const ListContainer: React.FC<any> = ({ data }) => {
     return (
         <ListContainerStyled noDecor>
             {data?.map((d: any) =>
-                <li key={d.link}>
-                    <Link to={d.link}>
+                <li key={d.name}>
+                    <Link to={d.link||'#'}>
                         <div>
                             <span>{d.ico}</span>
                         </div>
