@@ -36,6 +36,21 @@ export const Container = styled('ul')<{itemscope? : boolean, itemtype? : string}
     padding : 0;
     list-style-type: none;
     margin : 10px;
+    li {
+        padding: 5px;
+        min-height: 30px;
+        border: 1px solid;
+        width: calc(100% - 40px);
+        margin-left: 20px;
+        margin-top: 10px;
+        background: #fff;
+        box-shadow: 0px 2px 0px 0px rgb(6 6 6 / 6%);
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: 3fr 3fr 1fr 3fr 1fr 1fr;
+        align-items: center;
+        :hover {box-shadow: 0px 2px 0px 2px rgb(6 6 6 / 6%);}
+    }
 `
 export const ListItemStyled = styled('li')<{
     backgroundColor?: string,
