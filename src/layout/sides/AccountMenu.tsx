@@ -3,9 +3,8 @@ import { useSelector } from 'react-redux';
 import { Link, useParams } from 'react-router-dom';
 import { WrapperLeftSide, WrapperLeftSideHeader } from '../../ui/ui_wrappers';
 
-export const ExtensionsMenu: React.FC<any> = ({ linkToExtManager, accountId, user }) => {
-    const { extensions } = useSelector(({ space }: any) => space);
-    console.log(extensions)
+export const ExtensionsMenu: React.FC<any> = ({ linkToExtManager, accountId, user, extensions }) => {
+    
     return (
         <div>
             <div>
@@ -32,6 +31,8 @@ export const AccountMenu: React.FC<any> = ({ user, space }) => {
 
     const { accountId } = useParams<any>();
 
+    const { extensions } = useSelector(({ space }: any) => space);
+
     return (
         <WrapperLeftSide>
             <WrapperLeftSideHeader>
@@ -50,6 +51,7 @@ export const AccountMenu: React.FC<any> = ({ user, space }) => {
                 linkToExtManager={`/space/${user.email.split('@')[0]}/${accountId}/addExtension`}
                 user={user}
                 accountId={accountId}
+                extensions={extensions}
             />
         </WrapperLeftSide>
     )

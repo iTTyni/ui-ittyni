@@ -1,10 +1,33 @@
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { WrapperLeftSide, WrapperLeftSideFouter, WrapperLeftSideHeader } from "../../ui/ui_wrappers"
-import { ExtensionsMenu } from "./AccountMenu";
 
+export const ExtensionsAdminMenu: React.FC<any> = ({ linkToExtManager, accountId, user, extensions }) => {
+
+    return (
+        <div>
+            <div>
+                <h5 style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', width: '150px' }}>
+                    <span>Modules</span>
+                    <Link to={linkToExtManager}><i className="fas fa-plus" /></Link>
+                </h5>
+                <ul style={{ display: 'flex', flexDirection: "column", listStyle: "none" }}>
+                    {!extensions && <span>loading....</span>}
+                    {extensions?.map(
+                        (p: any) =>
+                            <li key={p._id}>
+                                <Link to={`/space/${user?.email?.split('@')[0]}/${accountId}/${p?.name}`} >
+                                    {p?.component.name.toUpperCase()}
+                                </Link>
+                            </li>
+                    )}
+                </ul>
+            </div>
+        </div>
+    )
+}
 export const AdminSidebar: React.FC<any> = ({ user }) => {
-
+    const { permissions } = useSelector(({ auth }: any) => auth.user);
     return (
         <WrapperLeftSide>
 
@@ -23,7 +46,10 @@ export const AdminSidebar: React.FC<any> = ({ user }) => {
                         <li><Link to={`/admin/${user.email.split('@')[0]}/settings`}> Settings </Link></li>
                     </ul>
 
-                    <ExtensionsMenu linkToExtManager={`/admin/${user.email.split('@')[0]}/addExtension`}/>
+                    <ExtensionsAdminMenu 
+                        linkToExtManager={`/admin/${user.email.split('@')[0]}/addExtension`}
+                        extensions={permissions}
+                    />
                     <WrapperLeftSideFouter>
                         <h5 style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
                             <span>Espaces</span>
