@@ -36,6 +36,7 @@ export * from './src/components/slider/images'
 export * from './src/components/slider/indicators'
 export * from './src/components/slider/thumbnails'
 export * from './src/components/card'
+export * from './src/components/bubble'
 // dropdowns
 export * from './src/components/dropdowns/dropdownMenu'
 
