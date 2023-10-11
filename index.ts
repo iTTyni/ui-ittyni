@@ -11,6 +11,7 @@ export * from './src/ui/ui_dropdowns'
 export * from './src/ui/ui_globals';
 export * from './src/ui/ui_form';
 export * from './src/ui/ui_modal';
+export * from './src/ui/ui_menu';
 export * from './src/ui/ui_panel';
 export * from './src/ui/ui_bubble';
 export * from './src/ui/ui_list';

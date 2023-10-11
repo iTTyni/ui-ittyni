@@ -10,13 +10,17 @@ export const Select: React.FC<{
     onChange: (e: any) => void,
     options: { value: string, name: string, otherOptions?: any }[],
     initialValue?: string
-}> = ({ name, onChange, options, initialValue }) => {
+    required?: boolean
+    disabled?: boolean
+}> = ({ name, onChange, options, initialValue, required, disabled }) => {
 
 
     return (
         <StyledSelect
             name={name}
             onChange={onChange}
+            required={required}
+            disabled={disabled}
         >
             <option disabled selected={!initialValue} defaultValue={"------------"}>----------</option>
             {
