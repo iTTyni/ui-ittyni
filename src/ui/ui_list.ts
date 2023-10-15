@@ -4,6 +4,11 @@ export const ContainerList = styled('ul') <{ itemscope?: boolean, itemtype?: str
     padding : 0;
     list-style-type: none;
     margin : 10px;
+    max-height : 730px;
+        overflow-x: scroll;
+        ::-webkit-scrollbar {
+            display: none;
+        }
 
     li {
         display: flex;

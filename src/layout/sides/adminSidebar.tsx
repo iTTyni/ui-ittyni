@@ -16,7 +16,7 @@ export const ExtensionsAdminMenu: React.FC<any> = ({ linkToExtManager, accountId
                     {extensions?.map(
                         (p: any) =>
                             <li key={p._id}>
-                                <Link to={`/space/${user?.email?.split('@')[0]}/${accountId}/${p?.name}`} >
+                                <Link to={`/admin/${user?.email?.split('@')[0]}/${p?.component.name}`} >
                                     {p?.component.name.toUpperCase()}
                                 </Link>
                             </li>
@@ -49,6 +49,7 @@ export const AdminSidebar: React.FC<any> = ({ user }) => {
                     <ExtensionsAdminMenu 
                         linkToExtManager={`/admin/${user.email.split('@')[0]}/addExtension`}
                         extensions={permissions}
+                        user={user}
                     />
                     <WrapperLeftSideFouter>
                         <h5 style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>

@@ -25,6 +25,7 @@ export * from './src/layout/sides/AccountMenu'
 export * from './src/layout/sides/webSidebar'
 export * from './src/layout/sides/webRightbar'
 // components
+export * from './src/components/edit-in-place'
 export * from './src/components/form'
 export * from './src/components/panel'
 export * from './src/components/modal'
