@@ -92,4 +92,5 @@ export const WrapperFooter = styled('div')<{
 
 }>`
     width: 100%;
+    padding: 15px;
 `
