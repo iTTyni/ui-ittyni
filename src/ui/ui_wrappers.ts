@@ -49,6 +49,9 @@ export const WrapperContent = styled('div')<{
   ${device.largeDesktop`
       margin: 15px;
     `}
+  ${device.mobile`
+    width: 100%;
+  `}
 `
 
 export const WrapperLeftSide = styled('div')<{
@@ -58,6 +61,10 @@ export const WrapperLeftSide = styled('div')<{
   display: flex;
   width: 300px;
   flex-direction: column;
+
+  ${device.mobile`
+    display: none;
+  `}
 `
 export const WrapperLeftSideHeader = styled('div')<{}>`
   display: flex;
