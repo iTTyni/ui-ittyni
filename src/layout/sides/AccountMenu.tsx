@@ -36,8 +36,11 @@ export const AccountMenu: React.FC<any> = ({ user, space }) => {
     return (
         <WrapperLeftSide>
             <WrapperLeftSideHeader>
-                <div>
-                    <img src={user.picture} height="60" width="60" />
+                <div style={{height: "35px",
+    borderRadius: "50%",
+    border: "1px solid black",
+    width: "35px"}}>
+                    <img src={user.picture} style={{width: "35px", height: "35px", borderRadius: "50%"}} />
                 </div>
                 <div style={{ padding: '5px' }}>
                     {space?.account.name}

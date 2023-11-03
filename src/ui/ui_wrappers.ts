@@ -23,8 +23,7 @@ export const WrapperHeader = styled('div')<{
     background: #FFFFFF;   
     justify-content: space-between;
     align-items: center;
-    margin-bottom : 20px;
-    box-shadow: 0 3px 6px rgb(0 0 0 / 4%);
+    border-bottom: 1px solid lightgray;
 `
 
 export const WrapperSubheader = styled('div')<{
@@ -57,11 +56,10 @@ export const WrapperContent = styled('div')<{
 export const WrapperLeftSide = styled('div')<{
   hide?: boolean    
 }>`
-  display: ${({hide}:any)=> hide? "none" : "block"}
-  display: flex;
-  width: 300px;
+  display: ${({hide}:any)=> hide? "none" : "block"};
+  width: 250px;
   flex-direction: column;
-
+  border-right: 1px solid lightgray;
   ${device.mobile`
     display: none;
   `}
@@ -75,11 +73,12 @@ export const WrapperLeftSideHeader = styled('div')<{}>`
   alignItems: center;
 `
 export const WrapperLeftSideFouter = styled('div')<{}>`
+  line-height: 25px;
   position: absolute; 
   bottom: 60px; 
   display: flex; 
   flex-direction: column; 
-  width: 280px;
+  width: 240px;
 `
 
 export const WrapperRightSide = styled('div')<{
@@ -91,6 +90,5 @@ export const WrapperRightSide = styled('div')<{
 export const WrapperFooter = styled('div')<{
 
 }>`
-    width: 100%;
     padding: 15px;
 `
