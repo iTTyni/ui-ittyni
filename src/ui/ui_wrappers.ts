@@ -16,14 +16,15 @@ export const WrapperWeb = styled('div') <{
 export const WrapperHeader = styled('div')<{
 
 }>`
-    width: 100%;
-    z-index: 11;
-    display : flex;
-    flex-direction : row;  
-    background: #FFFFFF;   
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid lightgray;
+  position: fixed;  
+  width: 100%;
+  display : flex;
+  flex-direction : row;  
+  background: #FFFFFF;   
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid lightgray;
+  z-index: 11;
 `
 
 export const WrapperSubheader = styled('div')<{
@@ -41,10 +42,18 @@ export const WrapperMain = styled('div')<{
 export const WrapperContent = styled('div')<{
 
 }>`
-  width: 70%;
+  width: 100%;
   margin: 0 15px;
-  height: 90vh;
+  padding-left: 250px;
+  padding-top: 30px;
   display: flex;
+  overflow-y: scroll;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+
   ${device.largeDesktop`
       margin: 15px;
     `}
@@ -56,6 +65,9 @@ export const WrapperContent = styled('div')<{
 export const WrapperLeftSide = styled('div')<{
   hide?: boolean    
 }>`
+  position: fixed;
+  height: 100vh;
+  padding-top: 50px;
   display: ${({hide}:any)=> hide? "none" : "block"};
   width: 250px;
   flex-direction: column;
@@ -90,5 +102,5 @@ export const WrapperRightSide = styled('div')<{
 export const WrapperFooter = styled('div')<{
 
 }>`
-    padding: 15px;
+    padding: 15px 15px 15px 250px;
 `
