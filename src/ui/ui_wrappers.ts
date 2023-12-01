@@ -43,6 +43,7 @@ export const WrapperContent = styled('div')<{
 
 }>`
   width: 100%;
+  min-height: 88vh;
   margin: 0 15px;
   padding-left: 250px;
   padding-top: 30px;

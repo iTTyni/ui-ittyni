@@ -23,10 +23,6 @@ export const ContainerList = styled('ul') <{ itemscope?: boolean, itemtype?: str
         align-items : center;
         justify-content : flex-start;
 
-        * {
-            background : #ffffff;
-        }
-
         ${device.mobile`
             margin : 10px 0;
         `}
