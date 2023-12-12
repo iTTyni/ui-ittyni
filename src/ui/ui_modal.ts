@@ -1,4 +1,4 @@
-import {styled} from "../.."
+import {device, styled} from "../.."
 
 export const ModalContainer = styled('div')<{
     width?:number, height?:string
@@ -20,6 +20,12 @@ export const ModalContainer = styled('div')<{
         right: 0;
         cursor: pointer;
     }
+    ${device.mobile`
+        height: 100vh;
+        width: 100vw;
+        left: 0;
+        top: 0;
+    `}
 `
 export const ModalHeader = styled('div')`
     padding: 5px 5px;
@@ -96,6 +102,11 @@ export const ModalList = styled('ul')`
     max-height: 300px;
     overflow-y: scroll;
     display: grid;
+    padding: 0;
+    ${device.mobile`
+        width: 100vw;
+        max-height: 80vh;
+    `}
     &>li{
         display : grid;
         grid-column-gap : 10px;

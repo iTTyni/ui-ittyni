@@ -16,15 +16,15 @@ export const WrapperWeb = styled('div') <{
 export const WrapperHeader = styled('div')<{
 
 }>`
-    width: 100%;
-    z-index: 11;
-    display : flex;
-    flex-direction : row;  
-    background: #FFFFFF;   
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom : 20px;
-    box-shadow: 0 3px 6px rgb(0 0 0 / 4%);
+  position: fixed;  
+  width: 100%;
+  display : flex;
+  flex-direction : row;  
+  background: #FFFFFF;   
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid lightgray;
+  z-index: 11;
 `
 
 export const WrapperSubheader = styled('div')<{
@@ -42,19 +42,40 @@ export const WrapperMain = styled('div')<{
 export const WrapperContent = styled('div')<{
 
 }>`
-  width: 70%;
+  width: 100%;
+  min-height: 88vh;
   margin: 0 15px;
-  height: 90vh;
+  padding-left: 250px;
+  padding-top: 30px;
   display: flex;
+  overflow-y: scroll;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+
   ${device.largeDesktop`
-      margin: 15px 15px 15px 15%;
+      margin: 15px;
     `}
+  ${device.mobile`
+    width: 100%;
+  `}
 `
 
 export const WrapperLeftSide = styled('div')<{
   hide?: boolean    
 }>`
-  display: ${({hide}:any)=> hide? "none" : "block"}
+  position: fixed;
+  height: 100vh;
+  padding-top: 50px;
+  display: ${({hide}:any)=> hide? "none" : "block"};
+  width: 250px;
+  flex-direction: column;
+  border-right: 1px solid lightgray;
+  ${device.mobile`
+    display: none;
+  `}
 `
 export const WrapperLeftSideHeader = styled('div')<{}>`
   display: flex;
@@ -65,10 +86,12 @@ export const WrapperLeftSideHeader = styled('div')<{}>`
   alignItems: center;
 `
 export const WrapperLeftSideFouter = styled('div')<{}>`
+  line-height: 25px;
   position: absolute; 
   bottom: 60px; 
   display: flex; 
   flex-direction: column; 
+  width: 240px;
 `
 
 export const WrapperRightSide = styled('div')<{
@@ -80,5 +103,5 @@ export const WrapperRightSide = styled('div')<{
 export const WrapperFooter = styled('div')<{
 
 }>`
-    width: 100%;
+    padding: 15px 15px 15px 250px;
 `

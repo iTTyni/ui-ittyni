@@ -11,9 +11,7 @@ export const StyledBubble = styled('div')
     lineHeight? : string,
     fontSize? : number,
     border? : boolean
-}>
-`
-    
+}>`
     ${({fullWidth})=>fullWidth?'width : 100%;' : 'max-width: 180px;'}
     padding: 2px 12px;
     border-radius: ${({bordered}:any)=>bordered?"14px" : '0'};
@@ -29,7 +27,14 @@ export const StyledBubble = styled('div')
     width : fit-content;
     cursor : pointer;
     margin: 0 5px;
-    background-color: ${({selected, selectedBgColor, bgColor}:any)=>bgColor?(selected?selectedBgColor:bgColor):'#f0f3fa'};
+    background-color: ${
+        ({selected, selectedBgColor, bgColor}:any)=>{
+            if(selected){
+                return selectedBgColor?selectedBgColor:(bgColor || '#f0f3fa');
+            } else {
+                return bgColor?bgColor: '#f0f3fa'
+            }
+        }}
     
 `
 

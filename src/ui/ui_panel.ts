@@ -1,12 +1,12 @@
 import {styled} from "../../";
 
-export const PanelContainer = styled('div')<{
-
+export const PanelContainerStyled = styled('div')<{
+    withborder?: boolean
 }>
 ` 
     background-color : white;
     margin : 0 0 15px 0;
-    border: 1px solid #e1e1e1;
+    border: {$({withborder}:any=>"1px solid #e1e1e1" || "none")};
     padding: 5px;
 
     .header {

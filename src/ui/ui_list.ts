@@ -4,6 +4,11 @@ export const ContainerList = styled('ul') <{ itemscope?: boolean, itemtype?: str
     padding : 0;
     list-style-type: none;
     margin : 10px;
+    max-height : 730px;
+        overflow-x: scroll;
+        ::-webkit-scrollbar {
+            display: none;
+        }
 
     li {
         display: flex;
@@ -17,10 +22,6 @@ export const ContainerList = styled('ul') <{ itemscope?: boolean, itemtype?: str
         transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
         align-items : center;
         justify-content : flex-start;
-
-        * {
-            background : #ffffff;
-        }
 
         ${device.mobile`
             margin : 10px 0;
@@ -36,22 +37,40 @@ export const Container = styled('ul')<{itemscope? : boolean, itemtype? : string}
     padding : 0;
     list-style-type: none;
     margin : 10px;
+    li {
+        padding: 5px;
+        min-height: 30px;
+        border: 1px solid;
+        width: calc(100% - 40px);
+        margin-left: 20px;
+        margin-top: 10px;
+        background: #fff;
+        box-shadow: 0px 2px 0px 0px rgb(6 6 6 / 6%);
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: 3fr 3fr 1fr 3fr 1fr 1fr;
+        align-items: center;
+        :hover {box-shadow: 0px 2px 0px 2px rgb(6 6 6 / 6%);}
+    }
 `
 export const ListItemStyled = styled('li')<{
     backgroundColor?: string,
     display?: any
     margin?: string
     padding?: string
+    minHeight?: number
 }>`
     ${({display})=>display || 'display: flex'}
     background-color: ${({backgroundColor})=>backgroundColor || '#ffffff'};
     margin: ${({margin})=>margin|| '5px'};
-    padding: $({padding})=>padding|| '5px'};
-    min-height : 70px;
+    padding: ${({padding})=>padding|| '5px'};
+    min-height : ${({minHeight})=>minHeight || '20px'};
     border-radius: 5px;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.2);
     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-
+    :hover{
+        box-shadow: 0px 1px 5px 4px #00ACC1
+    }
     * {
         background : #ffffff;
     }

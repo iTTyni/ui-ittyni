@@ -8,8 +8,8 @@ export const ListContainer: React.FC<any> = ({ data }) => {
     return (
         <ListContainerStyled noDecor>
             {data?.map((d: any) =>
-                <li key={d.link}>
-                    <Link to={d.link}>
+                <li key={d.name}>
+                    <Link to={d.link||'#'}>
                         <div>
                             <span>{d.ico}</span>
                         </div>
@@ -31,9 +31,9 @@ export const ListItem: React.FC<{
         display: any
     }
     [key : string]: any
-}> = ({children, customStyles})=>{
+}> = ({children, customStyles, ...args})=>{
     return(
-        <ListItemStyled {...customStyles}>
+        <ListItemStyled {...customStyles} {...args}>
             {children}
         </ListItemStyled>
     )
