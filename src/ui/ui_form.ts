@@ -41,3 +41,16 @@ export const StyledSelect = styled('select')`
     grid-template-columns: 1fr 5fr;
     align-items: center;
 `
+
+export const StyledTextArea = styled('textarea')<{
+    border? : string
+    width? : string
+    fontSize? : string
+    fontFamily? : string
+}>
+`
+    border : ${({border})=>border?border:'none'};
+    width : ${({width})=>width?width:''};
+    font-size : ${({fontSize})=>fontSize?fontSize:'14px'};
+    font-family : ${({fontFamily})=>fontFamily?fontFamily:''};
+`
