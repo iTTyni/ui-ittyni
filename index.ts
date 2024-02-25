@@ -17,6 +17,7 @@ export * from './src/ui/ui_bubble';
 export * from './src/ui/ui_list';
 export * from './src/ui/ui_search';
 export * from './src/ui/ui_table';
+export * from './src/ui/ui_tooltip';
 // layout
 export * from './src/layout/header/header'
 export * from './src/layout/header/subheader'
@@ -39,6 +40,7 @@ export * from './src/components/slider/indicators'
 export * from './src/components/slider/thumbnails'
 export * from './src/components/card'
 export * from './src/components/bubble'
+export * from './src/components/button'
 // dropdowns
 export * from './src/components/dropdowns/dropdownMenu'
 

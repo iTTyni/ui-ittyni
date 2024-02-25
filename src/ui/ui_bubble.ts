@@ -11,6 +11,8 @@ export const StyledBubble = styled('div')
     lineHeight? : string,
     fontSize? : number,
     border? : boolean
+    onClick? : any,
+    children? : any
 }>`
     ${({fullWidth})=>fullWidth?'width : 100%;' : 'max-width: 180px;'}
     padding: 2px 12px;
