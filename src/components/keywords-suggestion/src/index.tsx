@@ -1,11 +1,11 @@
 import * as React from 'react';
 import { KWContainer } from './style';
 
-export const KeyWordSugg: React.FC<any> = ({ title, suggestedWords, column, searchTest, components, setComponents}) => {
+export const KeyWordSugg: React.FC<any> = ({ title, suggestedWords, column, searchTest, components, setComponents }) => {
   // enable edit
   const [isDisabled, setIsDisabled] = React.useState<boolean>(true)
   // get data from inputs
-  const [departements, setDepartements] = React.useState<string[]>(components||[])
+  const [departements, setDepartements] = React.useState<string[]>(components || [])
   // get data from inputs
   const [departement, setDepartement] = React.useState<string>('')
   // clear input after add departement
@@ -47,7 +47,7 @@ export const KeyWordSugg: React.FC<any> = ({ title, suggestedWords, column, sear
               onClick={(e: any) => setDepartements(departements.filter((f: any) => f.id != d.id))}
             />
           </span>
-        )}        
+        )}
         <div>
           {/**====== data input field ========*/}
           <input
@@ -87,5 +87,3 @@ export const KeyWordSugg: React.FC<any> = ({ title, suggestedWords, column, sear
     </div>
   );
 };
-
-
