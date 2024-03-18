@@ -33,7 +33,7 @@ export const ContainerList = styled('ul') <{ itemscope?: boolean, itemtype?: str
 
     }
 `
-export const Container = styled('ul')<{itemscope? : boolean, itemtype? : string}>`
+export const Container = styled('ul') <{ itemscope?: boolean, itemtype?: string }>`
     padding : 0;
     list-style-type: none;
     margin : 10px;
@@ -53,18 +53,18 @@ export const Container = styled('ul')<{itemscope? : boolean, itemtype? : string}
         :hover {box-shadow: 0px 2px 0px 2px rgb(6 6 6 / 6%);}
     }
 `
-export const ListItemStyled = styled('li')<{
-    backgroundColor?: string,
-    display?: any
-    margin?: string
-    padding?: string
-    minHeight?: number
+export const ListItemStyled = styled('li') <{
+  backgroundColor?: string,
+  display?: any
+  margin?: string
+  padding?: string
+  minHeight?: number
 }>`
-    ${({display})=>display || 'display: flex'}
-    background-color: ${({backgroundColor})=>backgroundColor || '#ffffff'};
-    margin: ${({margin})=>margin|| '5px'};
-    padding: ${({padding})=>padding|| '5px'};
-    min-height : ${({minHeight})=>minHeight || '20px'};
+    ${({ display }) => display || 'display: flex'}
+    background-color: ${({ backgroundColor }) => backgroundColor || '#ffffff'};
+    margin: ${({ margin }) => margin || '5px'};
+    padding: ${({ padding }) => padding || '5px'};
+    min-height : ${({ minHeight }) => minHeight || '20px'};
     border-radius: 5px;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.2);
     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
@@ -140,10 +140,10 @@ export const ItemOptionsFinance = styled.div`
         }
     }
 `
-export const ListContainerStyled = styled('ul')<{noDecor: boolean, pd?:string, mg?:string}>`
-    list-style-type: ${({noDecor})=>noDecor?'none':'auto'};
-    ${({pd})=>pd&&`margin: ${pd}`}
-    ${({mg})=>mg&&`margin: ${mg}`}
+export const ListContainerStyled = styled('ul') <{ noDecor: boolean, pd?: string, mg?: string }>`
+    list-style-type: ${({ noDecor }) => noDecor ? 'none' : 'auto'};
+    ${({ pd }) => pd && `margin: ${pd}`}
+    ${({ mg }) => mg && `margin: ${mg}`}
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -178,7 +178,7 @@ export const ListContainerStyled = styled('ul')<{noDecor: boolean, pd?:string, m
     }
 `
 export const ListInfo = styled('ul')
-`
+  `
     list-style: none;
     padding: 0px;
     margin: 10px;
@@ -206,7 +206,7 @@ export const ListInfo = styled('ul')
 `
 // dropdown list styles
 export const DropdownS = styled('div')
-`
+  `
     position: absolute;
     width: 160px;
     left: -150px;
@@ -222,8 +222,8 @@ export const DropdownS = styled('div')
     }
     .footer{}
 `
-export const ListProcedures = styled('ul')<{}>
-`
+export const ListProcedures = styled('ul') <{}>
+  `
     li {
         background-color: white;
         /* color: white; */
@@ -295,8 +295,8 @@ export const ListProcedures = styled('ul')<{}>
         }
     }
 `
-export const ListTests = styled('ul')<{}>
-`
+export const ListTests = styled('ul') <{}>
+  `
     list-style : none;
 
     li {
@@ -378,7 +378,7 @@ export const ListTests = styled('ul')<{}>
 `
 
 export const LabList = styled('div') <{ hideMenu: boolean }>
-`
+  `
   position : absolute;
   max-height: 200px;
   min-width: 200px;
@@ -403,3 +403,53 @@ export const LabList = styled('div') <{ hideMenu: boolean }>
       :hover {background : #eaeaea;}
     }
 `
+
+export const StyledTreeViewContainer = styled('div')`
+  width: 500px;
+  margin: 0 auto;
+  font-size: 16px;
+`
+export const StyledTreeViewList = styled('ul')`
+  list-style: none;
+  padding: 0;
+  padding-left: 5px;
+`
+export const StyledTreeViewItem = styled('li') <{ hide: boolean }>`
+  padding: 5px 0 5px 15px;
+  position: relative;
+  color : ${({ hide }: any) => hide ? 'black' : 'green'}
+  &>ul {
+    display : ${({ hide }: any) => hide ? 'none' : 'block'}
+  }
+
+  :before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 13px;
+    width: 10px;
+    border-top: 1px solid #000;
+  }
+
+  :after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    border-left: 1px solid #000;
+  }
+
+  :last-child:after {
+    height: 14px;
+  }
+
+  span {
+    span {
+      margin-left: 5px;
+      color: #a8a8a8;
+      font-size: 13px;
+      font-style: italic;
+  }
+`
+
