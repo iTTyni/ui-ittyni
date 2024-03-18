@@ -5,31 +5,31 @@ import { device, styled } from '../../theme'
 
 
 export const Search: FC<any> = ({ }) => {
-    // show/hide search options
-    const [showOptions, setShowOptions] = React.useState<boolean>(false)
-    return (
-        <SearchContainer showOptions={showOptions} style={{width: "70%", marginLeft: "15%"}}>
-            <div style={
-              {color: "#50b750", fontSize: "x-large", textDecoration: 'underline', padding: "15px 0", textDecorationStyle: "dotted"}
-            }>
-                <span style={{color: "red"}}>TT</span><span style={{color: "grey"}}>para</span>
-            </div>
-            <div className="search">
-                <i className="fa fa-search font-green" />
-                <input placeholder="trouver analyses" />
-            </div>
-            <div style={{padding: "15px", color: "#50b750", fontSize: "x-large"}}>
-                <span><i className='fas fa-shopping-cart'/></span>
-            </div>
-              
-        </SearchContainer>
-    )
+  // show/hide search options
+  const [showOptions, setShowOptions] = React.useState<boolean>(false)
+  return (
+    <SearchContainer showOptions={showOptions} style={{ width: "70%", marginLeft: "15%" }}>
+      <div style={
+        { color: "#50b750", fontSize: "x-large", textDecoration: 'underline', padding: "15px 0", textDecorationStyle: "dotted" }
+      }>
+        <span style={{ color: "red" }}>TT</span><span style={{ color: "grey" }}>Lab</span>
+      </div>
+      <div className="search">
+        <i className="fa fa-search font-green" />
+        <input placeholder="trouver analyses" />
+      </div>
+      <div style={{ padding: "15px", color: "#50b750", fontSize: "x-large" }}>
+        <span><i className='fas fa-shopping-cart' /></span>
+      </div>
+
+    </SearchContainer>
+  )
 }
 
 export const SearchContainer = styled('div') <
-  { show?: boolean, showOptions? : boolean }
+  { show?: boolean, showOptions?: boolean }
 >
-`
+  `
   width: 50%;
   position: relative;
   display: grid;
@@ -133,7 +133,7 @@ export const SearchContainer = styled('div') <
       }
     }
     .options {
-      display : ${({showOptions}:any)=>showOptions?'flex' : 'none'};
+      display : ${({ showOptions }: any) => showOptions ? 'flex' : 'none'};
       flex-direction: column;
       position : absolute;
       background: white;
