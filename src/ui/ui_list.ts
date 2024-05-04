@@ -414,7 +414,7 @@ export const StyledTreeViewList = styled('ul')`
   padding: 0;
   padding-left: 5px;
 `
-export const StyledTreeViewItem = styled('li') <{ hide: boolean }>`
+export const StyledTreeViewItem = styled('li') <{ hide?: boolean }>`
   padding: 5px 0 5px 15px;
   position: relative;
   color : ${({ hide }: any) => hide ? 'black' : 'green'}
