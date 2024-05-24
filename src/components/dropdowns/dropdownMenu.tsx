@@ -13,38 +13,29 @@ export const DropdownMenu: React.FC<{
   title?: string;
   footer?: any;
   setOpen?: any;
-}> = ({ title, footer }) => {
+  children?: any;
+}> = ({ title, children, footer }) => {
   return (
     <DropdownMenuStyle>
       <label>{title}</label>
       <li>Menu 1</li>
+      <li>{children}</li>
     </DropdownMenuStyle>
   );
 };
 
-export const DropdownMenuContainer = () => {
+export const DropdownMenuContainer: React.FC<any> = ({links, icon, footer}) => {
   const [isOpen, setIsOpen] = React.useState<boolean>(false);
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
-  const handleDisconnect = () => {
-    console.log('user logged out');
-  };
-
   return (
     <DropdownContainerStyled>
-      <IconStyled onClick={toggleMenu}>☰</IconStyled>
+      <IconStyled onClick={toggleMenu}>{icon}</IconStyled>
       <DropdownMenuStyled isOpen={isOpen}>
-        <MenuItemStyled href="/admin/khmammed">Account</MenuItemStyled>
-        <MenuItemStyled href="/admin/khmammed">Account</MenuItemStyled>
-        <MenuItemStyled href="/admin/khmammed">Account</MenuItemStyled>
-        <MenuItemStyled href="/admin/khmammed">Account</MenuItemStyled>
-        <MenuFooterStyled>
-          <DisconnectButtonStyled onClick={handleDisconnect}>
-            Disconnect
-          </DisconnectButtonStyled>
-        </MenuFooterStyled>
+        {links.map((l:any)=><MenuItemStyled to={l.link}>{l.label}</MenuItemStyled>)}
+        {footer && <MenuFooterStyled>{footer}</MenuFooterStyled>}
       </DropdownMenuStyled>
     </DropdownContainerStyled>
   );

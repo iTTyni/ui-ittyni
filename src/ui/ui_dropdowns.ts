@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { styled } from "../..";
 
 export const DropdownMenuStyle = styled('ul') <{
@@ -48,7 +49,6 @@ export const DropdownContainerStyled = styled('div')`
 export const IconStyled = styled('div')`
   width: 40px;
   height: 40px;
-  background-color: #ccc;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -67,7 +67,7 @@ export const DropdownMenuStyled = styled('div') < { isOpen: boolean } > `
   border-radius: 8px;
   overflow: hidden;
 `
-export const MenuItemStyled = styled('a')`
+export const MenuItemStyled = styled(Link)`
   display: block;
   padding: 12px 16px;
   color: black;
