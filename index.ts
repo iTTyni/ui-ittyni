@@ -21,6 +21,7 @@ export * from './src/ui/ui_tooltip';
 // layout
 export * from './src/layout/header/header'
 export * from './src/layout/header/MainHeader'
+export * from './src/layout/header/ContentHeader'
 export * from './src/layout/header/subheader'
 export * from './src/layout/sides/adminSidebar'
 export * from './src/layout/sides/AccountMenu'
