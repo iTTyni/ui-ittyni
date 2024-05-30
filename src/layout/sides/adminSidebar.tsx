@@ -49,16 +49,16 @@ export const AdminSidebar: React.FC<any> = ({ user }) => {
                     </ul>
 
                     <ExtensionsAdminMenu 
-                        linkToExtManager={`/admin/${user.email.split('@')[0]}/addExtension`}
+                        linkToExtManager={`/admin/${user?.email?.split('@')[0]}/addExtension`}
                         extensions={permissions}
                         user={user}
                     />
                     <WrapperLeftSideFouter>
                         <h5 style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
                             <span>Espaces</span>
-                            <Link to={`/admin/${user.email.split('@')[0]}/addSpaces`}><i className="fas fa-plus" /></Link>
+                            <Link to={`/admin/${user?.email?.split('@')[0]}/addSpaces`}><i className="fas fa-plus" /></Link>
                         </h5>
-                        <Link to={`/admin/${user.email.split('@')[0]}`}>
+                        <Link to={`/admin/${user?.email?.split('@')[0]}`}>
                             <i className="fas fa-sign-out-alt" /> Mon Compte
                         </Link>
                         {user?.accounts.map((s: any) =>
