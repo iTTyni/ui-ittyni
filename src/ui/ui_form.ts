@@ -9,11 +9,12 @@ export const InputStyled = styled('input')<{
     minHeight?: number
 }>
 `
+    padding: 8px;
+    font-size: 1em;
+    border-radius: 4px;
     min-height : ${({minHeight})=>minHeight|| 10}px;
     width: ${({width})=>width?width : '100%'};
     outline : 0;
-    padding : 2px 0;
-    margin : 5px;
     background-color : white;
     color : #000000;
     font-weight: 700;
@@ -27,6 +28,10 @@ export const InputStyled = styled('input')<{
         background-color : ${({placeholderBg, theme})=>placeholderBg ? placeholderBg : theme?.color.defaultColor};
         color : ${({placeholderColor, theme})=>placeholderColor ? placeholderColor : theme?.color.secondaryColor};
         font-weight: 700;
+    }
+    
+    :focus {
+        outline: -webkit-focus-ring-color auto 1px
     }
     
     :disabled {
