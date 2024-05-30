@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { InputStyled } from '../../../../';
+import { InputStyled, LabelStyled, InputFormGroupContainer } from '../../../../';
 
 /**
  * Input Component for iTTyni.com
@@ -17,14 +17,15 @@ export const Input: React.FC<any> = (props) => <InputStyled {...props} />;
  */
 export const InputFormGroup: React.FC<{
   labelText: string;
+  inputName: string;
   small?: string;
   [key: string]: any;
-}> = ({ labelText, small, ...rest }) => {
+}> = ({ labelText, small,inputName, ...rest }) => {
   return (
-    <div>
-      <label htmlFor={labelText}>{labelText}</label>
-      <Input name={labelText} {...rest} />
+    <InputFormGroupContainer>
+      <LabelStyled htmlFor={inputName}>{labelText}</LabelStyled>
+      <Input name={inputName} {...rest} />
       {small && <small>{small}</small>}
-    </div>
+    </InputFormGroupContainer>
   );
 };
