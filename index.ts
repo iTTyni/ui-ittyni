@@ -20,6 +20,8 @@ export * from './src/ui/ui_table';
 export * from './src/ui/ui_tooltip';
 // layout
 export * from './src/layout/header/header'
+export * from './src/layout/header/MainHeader'
+export * from './src/layout/header/ContentHeader'
 export * from './src/layout/header/subheader'
 export * from './src/layout/sides/adminSidebar'
 export * from './src/layout/sides/AccountMenu'
@@ -27,6 +29,10 @@ export * from './src/layout/sides/webSidebar'
 export * from './src/layout/sides/webRightbar'
 // components
 export * from './src/components/edit-in-place'
+export * from './src/components/dropdowns'
+export * from './src/components/breadcrumbs'
+export * from './src/components/tab'
+export * from './src/components/filter'
 export * from './src/components/form'
 export * from './src/components/panel'
 export * from './src/components/modal'
@@ -41,8 +47,6 @@ export * from './src/components/slider/thumbnails'
 export * from './src/components/card'
 export * from './src/components/bubble'
 export * from './src/components/button'
-// dropdowns
-export * from './src/components/dropdowns/dropdownMenu'
 
 // modal
 export * from './src/components/modal/src/modal'

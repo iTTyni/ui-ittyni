@@ -1,15 +1,16 @@
+import { Link } from "react-router-dom";
 import { styled } from "../..";
 
-export const DropdownMenuStyle = styled('ul')<{
+export const DropdownMenuStyle = styled('ul') <{
 
 }>`
     list-decoration: none;
 `
 
-export const DropdownListStyled = styled('div')<{
-    width?: string
+export const DropdownListStyled = styled('div') <{
+  width?: string
 }>
-`
+  `
     position : absolute;
     max-height: 200px;
     min-width: 200px;
@@ -19,7 +20,7 @@ export const DropdownListStyled = styled('div')<{
     background-color: white;
     border: 1px solid;
     display : ${({ hideMenu }: any) => hideMenu ? 'none' : 'block'};
-    width: ${({ width }: any) => width?width: '100%'};
+    width: ${({ width }: any) => width ? width : '100%'};
     div {
         ul {
             margin: 0;
@@ -40,5 +41,52 @@ export const DropdownListStyled = styled('div')<{
             }
         }
     }
-        
+`
+export const DropdownContainerStyled = styled('div')`
+  position: relative;
+  display: inline-block;
+`
+export const IconStyled = styled('div')`
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+`
+
+export const DropdownMenuStyled = styled('div') < { isOpen: boolean } > `
+  display: ${({ isOpen }: any) => (isOpen ? 'block' : 'none')};
+  position: absolute;
+  top: 50px;
+  right: 0;
+  background-color: white;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 8px;
+  overflow: hidden;
+`
+export const MenuItemStyled = styled(Link)`
+  display: block;
+  padding: 12px 16px;
+  color: black;
+  text-decoration: none;
+  &:hover {
+    background-color: #f1f1f1;
+  }
+`
+export const MenuFooterStyled = styled('div')`
+  padding: 12px 16px; 
+  background-color: #f9f9f9;
+  text-align: center;
+`
+export const DisconnectButtonStyled = styled('button')`
+  background-color: #ff4d4f;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  &:hover{background-color: #ff7875;}
 `

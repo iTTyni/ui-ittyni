@@ -22,6 +22,7 @@ export interface IThemeInterface {
     secondaryColor: string;
     thirdColor: string;
     fourthColor: string;
+    fiveColor: string;
   },
   font: {
     fontSize: number,
