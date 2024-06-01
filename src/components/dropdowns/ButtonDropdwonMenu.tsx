@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import styled from 'styled-components';
+import {styled} from '../../theme';
+import useOnClickOutside from '../../hooks/useOnClickOutside';
 
 interface DropdownButtonProps {
   selected: boolean;
@@ -23,14 +24,9 @@ const DropdownButton = styled.button<DropdownButtonProps>`
   display: flex;
   align-items: center;
   cursor: pointer;
-
-  &:after {
-    content: "▾";
-    margin-left: 5px;
-  }
 `;
 
-export const DropdownContent = styled.div<DropdownContentProps>`
+const DropdownContent = styled.div<DropdownContentProps>`
   display: ${(props) => (props.show ? 'block' : 'none')};
   position: absolute;
   background-color: white;
@@ -44,71 +40,126 @@ export const DropdownContent = styled.div<DropdownContentProps>`
 const DefaultDropdownItem = styled.div`
   padding: 8px 16px;
   cursor: pointer;
+  font-size: 12px; /* Set font size to 12 */
 
   &:hover {
     background-color: #f6f8fa;
   }
 
   &.section-title {
-    font-weight: bold;
+    font-weight: 700;
     margin-top: 5px;
+    color: black; /* Color set to black */
   }
 `;
 
 interface DropdownItemProps {
-  section?: string;
-  item: string;
-  onSelect: (section: string, item: string) => void;
+  section: string;
+  label: string;
+  value: string;
+  onSelect: (label: string, value: string) => void;
   className?: string;
 }
 
-const DropdownItem: React.FC<DropdownItemProps> = ({ section = '', item, onSelect, className }) => {
+const DropdownItem: React.FC<DropdownItemProps> = ({
+  label,
+  value,
+  onSelect,
+  className,
+}) => {
   return (
-    <DefaultDropdownItem onClick={() => onSelect(section, item)} className={className}>
-      {item}
+    <DefaultDropdownItem
+      onClick={() => onSelect(label, value)}
+      className={className}
+    >
+      {label}
     </DefaultDropdownItem>
   );
 };
 
 interface DropdownMenuProps {
-  items: { section?: string; label: string }[];
-  withSections?: boolean;
+  items: { section: string; items: { label: string; value: string }[] }[];
+  initialValue?: string; // Changed to only a value string
+  setParentState: (
+    selectedItem: { label: string; value: string } | null
+  ) => void; // added setParentState
 }
 
-export const ButtonDropdownMenu: React.FC<DropdownMenuProps> = ({ items, withSections = false }) => {
-  const [showDropdown, setShowDropdown] = useState(false);
-  const [selectedItem, setSelectedItem] = useState<string>('+');
+export const ButtonDropdownMenu: React.FC<DropdownMenuProps> = ({
+  items,
+  initialValue,
+  setParentState,
+}) => {
+  const [showDropdown, setShowDropdown] = useState<boolean>(false);
+  const [selectedItem, setSelectedItem] = useState<{
+    label: string;
+    value: string;
+  } | null>(null);
+
+  const ref = React.useRef(null);
+  useOnClickOutside(ref, (e: Event) => setShowDropdown(false));
+  React.useEffect(() => {
+    if (initialValue) {
+      const selected = findItemByValue(initialValue);
+      if (selected) {
+        setSelectedItem(selected);
+        setParentState(selected);
+      }
+    }
+  }, [initialValue]);
 
   const toggleDropdown = () => {
     setShowDropdown(!showDropdown);
   };
 
-  const handleSelectItem = (section: string, item: string) => {
-    setSelectedItem(`${section ? `${section}: ` : ''}${item}`);
+  const handleSelectItem = (label: string, value: string) => {
+    const newItem = { label, value };
+    setSelectedItem(newItem);
     setShowDropdown(false);
+    setParentState(newItem); // Update parent state
+  };
+
+  const getSectionLabel = (value: string) => {
+    for (const item of items) {
+      const foundItem = item.items.find((i) => i.value === value);
+      if (foundItem) {
+        return item.section;
+      }
+    }
+    return '';
+  };
+
+  const findItemByValue = (value: string) => {
+    for (const item of items) {
+      const foundItem = item.items.find((i) => i.value === value);
+      if (foundItem) {
+        return { label: foundItem.label, value: foundItem.value };
+      }
+    }
+    return null;
   };
 
   return (
     <Container>
-      <DropdownButton onClick={toggleDropdown} selected={selectedItem !== '+'}>
-        {selectedItem}
+      <DropdownButton onClick={toggleDropdown} selected={selectedItem !== null}>
+        {selectedItem
+          ? `${getSectionLabel(selectedItem.value)} : ${selectedItem.label} `
+          : 'Select'}
       </DropdownButton>
-      <DropdownContent show={showDropdown}>
-        {items.map((dropdownItem, index) => (
+      <DropdownContent show={showDropdown} ref={ref}>
+        {items.map((sectionItem, index) => (
           <React.Fragment key={index}>
-            {withSections && dropdownItem.section && (
+            <div className="section-title">{sectionItem.section}</div>
+            {sectionItem.items.map((item, itemIndex) => (
               <DropdownItem
-                section={dropdownItem.section}
-                item={dropdownItem.section}
-                onSelect={() => {}}
-                className="section-title"
+                key={itemIndex}
+                section={sectionItem.section}
+                label={item.label}
+                value={item.value}
+                onSelect={handleSelectItem}
+                className="menu-item" // Apply class for menu items
               />
-            )}
-            <DropdownItem
-              section={dropdownItem.section || ''}
-              item={dropdownItem.label}
-              onSelect={handleSelectItem}
-            />
+            ))}
           </React.Fragment>
         ))}
       </DropdownContent>
