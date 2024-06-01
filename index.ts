@@ -29,6 +29,7 @@ export * from './src/layout/sides/webSidebar'
 export * from './src/layout/sides/webRightbar'
 // components
 export * from './src/components/edit-in-place'
+export * from './src/components/dropdowns'
 export * from './src/components/breadcrumbs'
 export * from './src/components/tab'
 export * from './src/components/filter'
@@ -46,8 +47,6 @@ export * from './src/components/slider/thumbnails'
 export * from './src/components/card'
 export * from './src/components/bubble'
 export * from './src/components/button'
-// dropdowns
-export * from './src/components/dropdowns/dropdownMenu'
 
 // modal
 export * from './src/components/modal/src/modal'
