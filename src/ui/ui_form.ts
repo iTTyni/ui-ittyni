@@ -6,10 +6,10 @@ export const LabelStyled = styled('label')<{}>`
   margin-bottom: 5px;
   margin-top: 5px;
 `;
-export const InputFormGroupContainer = styled('div')<{}>
-`
-    margin-bottom: 15px;
-`
+export const InputFormGroupContainer = styled('div')<{}>`
+  position: relative;
+  margin-bottom: 15px;
+`;
 export const InputStyled = styled('input')<{
   placeholderColor?: string;
   placeholderBg?: string;

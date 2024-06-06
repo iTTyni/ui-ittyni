@@ -7,7 +7,6 @@ export const StyledTable = styled('table') <{
     width: 100%;
     border-spacing: inherit;
 `
-
 export const StyledThead = styled('thead') <{
     theme: IThemeInterface
     hide?: boolean
@@ -21,7 +20,6 @@ export const StyledTbody = styled('tbody') <{
     theme: IThemeInterface
 }>`
 `
-
 export const StyledRow = styled('tr') <{
     theme: IThemeInterface
     height?: string
@@ -57,7 +55,6 @@ const Gradient = keyframes`
       background-position: 0%;
   }
 `
-
 export const DataTableContainer = styled.div`
   margin-right: 10px;
 `;

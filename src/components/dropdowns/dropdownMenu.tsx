@@ -8,23 +8,35 @@ import {
   MenuFooterStyled,
   DisconnectButtonStyled,
 } from '../../../';
+import useOnClickOutside from '../../hooks/useOnClickOutside';
 
 export const DropdownMenu: React.FC<{
   title?: string;
   footer?: any;
   setOpen?: any;
   children?: any;
-}> = ({ title, children, footer }) => {
+  show?: any;
+}> = ({ title, children, show }) => {
+  
+  const [showMenu, setShowMenu] = React.useState<boolean>(show);
+  
+ React.useEffect(() => {
+    console.log('show effect', show);
+    setShowMenu(show);
+  }, [show]);
   return (
-    <DropdownMenuStyle>
-      <label>{title}</label>
-      <li>Menu 1</li>
-      <li>{children}</li>
+    <DropdownMenuStyle showMenu={showMenu}>
+      {title&&<label>{title}</label>}
+        {children}
     </DropdownMenuStyle>
   );
 };
 
-export const DropdownMenuContainer: React.FC<any> = ({links, icon, footer}) => {
+export const DropdownMenuContainer: React.FC<any> = ({
+  links,
+  icon,
+  footer,
+}) => {
   const [isOpen, setIsOpen] = React.useState<boolean>(false);
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -34,7 +46,9 @@ export const DropdownMenuContainer: React.FC<any> = ({links, icon, footer}) => {
     <DropdownContainerStyled>
       <IconStyled onClick={toggleMenu}>{icon}</IconStyled>
       <DropdownMenuStyled isOpen={isOpen}>
-        {links.map((l:any)=><MenuItemStyled to={l.link}>{l.label}</MenuItemStyled>)}
+        {links.map((l: any) => (
+          <MenuItemStyled to={l.link}>{l.label}</MenuItemStyled>
+        ))}
         {footer && <MenuFooterStyled>{footer}</MenuFooterStyled>}
       </DropdownMenuStyled>
     </DropdownContainerStyled>

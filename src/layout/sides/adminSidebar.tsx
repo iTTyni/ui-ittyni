@@ -61,7 +61,7 @@ export const AdminSidebar: React.FC<any> = ({ user }) => {
                         <Link to={`/admin/${user?.email?.split('@')[0]}`}>
                             <i className="fas fa-sign-out-alt" /> Mon Compte
                         </Link>
-                        {user?.accounts.map((s: any) =>
+                        {user?.accounts?.map((s: any) =>
                             <>
                                 <Link to={`/space/${user?.email.split('@')[0]}/${s.labo?._id||s.space?._id}`} key={s.labo?._id||s.space?._id}>
                                     <i className="fas fa-sign-out-alt" /> {s.labo?.account.name||s.space?.account.name}

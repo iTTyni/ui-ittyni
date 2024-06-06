@@ -29,3 +29,29 @@ export const InputFormGroup: React.FC<{
     </InputFormGroupContainer>
   );
 };
+
+/**
+ * Input Form Group with Dropdown Menu Component for iTTyni.com
+ * @param labelText - Label text for the input field.
+ * @param inputName - Name attribute for the input field.
+ * @param dropdownMenu - Dropdown menu element (optional).
+ * @param small - Small text to display below the input (optional).
+ * @param rest - Any additional props to pass to the Input component.
+ * @returns JSX.Element
+ */
+export const InputFormGroupWithDrowdownMenu: React.FC<{
+  labelText: string;
+  inputName: string;
+  drowdownMenu: React.ReactElement
+  small?: string;
+  [key: string]: any;
+}> = ({ labelText, small,inputName,drowdownMenu , ...rest }) => {
+  return (
+    <InputFormGroupContainer>
+      <LabelStyled htmlFor={inputName}>{labelText}</LabelStyled>
+      <Input name={inputName} {...rest} />
+      {small && <small>{small}</small>}
+      {drowdownMenu}
+    </InputFormGroupContainer>
+  );
+};

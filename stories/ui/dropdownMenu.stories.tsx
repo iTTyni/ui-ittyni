@@ -13,3 +13,8 @@ export default meta;
 export const dropdownStory: Story = args =><DropdownMenuStyle {...args}/>
 
 const dropdownMenuStyled = dropdownStory.bind({});
+
+
+dropdownMenuStyled.args = {
+    showMenu: false
+}
