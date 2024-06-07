@@ -180,6 +180,7 @@ const Datalist: React.FC<DatalistProps> = ({ data }) => {
                   <>
                     <span onClick={() => handleHeaderClick(header)}>
                       {t(`headers.${header}`)}
+                      {t(`${extName}.${header}`)}
                     </span>
                     <SortIcon>{getSortIcon(header)}</SortIcon>
                   </>
