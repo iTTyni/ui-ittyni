@@ -77,9 +77,10 @@ interface DataItem {
 
 interface DatalistProps {
   data: DataItem[];
+  extName?: string;
 }
 
-const Datalist: React.FC<DatalistProps> = ({ data }) => {
+const Datalist: React.FC<DatalistProps> = ({ data, extName }) => {
   const { t } = useTranslation();
   const [filteredData, setFilteredData] = useState(data);
   const [filters, setFilters] = useState<Record<string, string>>({});
@@ -118,11 +119,9 @@ const Datalist: React.FC<DatalistProps> = ({ data }) => {
     }
 
     const sortedData = [...filteredData].sort((a, b) => {
-      if (a[key] < b[key]) {
       if (a[key]?.toLowerCase() < b[key]?.toLowerCase()) {
         return direction === 'ascending' ? -1 : 1;
       }
-      if (a[key] > b[key]) {
       if (a[key]?.toLowerCase() > b[key]?.toLowerCase()) {
         return direction === 'ascending' ? 1 : -1;
       }
@@ -179,7 +178,6 @@ const Datalist: React.FC<DatalistProps> = ({ data }) => {
                 ) : (
                   <>
                     <span onClick={() => handleHeaderClick(header)}>
-                      {t(`headers.${header}`)}
                       {t(`${extName}.${header}`)}
                     </span>
                     <SortIcon>{getSortIcon(header)}</SortIcon>
