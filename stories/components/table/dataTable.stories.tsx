@@ -12,7 +12,7 @@ const meta: Meta = {
 export default meta;
 
 
-const Template: Story = args=><Datalist  data={[]}  />
+const Template: Story = args=><Datalist  data={[]} onSelect={console.log}  />
 
 export const Default = Template.bind({});
 

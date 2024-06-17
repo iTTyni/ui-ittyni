@@ -78,9 +78,10 @@ interface DataItem {
 interface DatalistProps {
   data: DataItem[];
   extName?: string;
+  onSelect:(d: any)=> void;
 }
 
-const Datalist: React.FC<DatalistProps> = ({ data, extName }) => {
+const Datalist: React.FC<DatalistProps> = ({ data, extName, onSelect }) => {
   const { t } = useTranslation();
   const [filteredData, setFilteredData] = useState(data);
   const [filters, setFilters] = useState<Record<string, string>>({});
@@ -189,7 +190,7 @@ const Datalist: React.FC<DatalistProps> = ({ data, extName }) => {
         </TableHead>
         <tbody>
           {filteredData.map((item, index) => (
-            <TableRow key={index}>
+            <TableRow key={index} onClick={()=>onSelect(item)}>
               {headers.map((header, index) => (
                 <TableCell key={index}>{item[header]}</TableCell>
               ))}

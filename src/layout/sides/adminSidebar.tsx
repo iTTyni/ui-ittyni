@@ -27,7 +27,6 @@ export const ExtensionsAdminMenu: React.FC<any> = ({ linkToExtManager, accountId
     )
 }
 export const AdminSidebar: React.FC<any> = ({ user }) => {
-    const { permissions } = useSelector(({ auth }: any) => auth.user);
     return (
         <WrapperLeftSide>
 
@@ -50,7 +49,7 @@ export const AdminSidebar: React.FC<any> = ({ user }) => {
 
                     <ExtensionsAdminMenu 
                         linkToExtManager={`/admin/${user?.email?.split('@')[0]}/addExtension`}
-                        extensions={permissions}
+                        extensions={user?.extensions || []}
                         user={user}
                     />
                     <WrapperLeftSideFouter>
