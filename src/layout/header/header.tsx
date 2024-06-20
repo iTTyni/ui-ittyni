@@ -36,7 +36,7 @@ export const PlateformLinks: React.FC<any> = () => {
   );
 };
 
-export const Header: React.FC<any> = ({ user }) => {
+export const Header: React.FC<any> = () => {
   return (
     <WrapperHeader>
       {/* left menu */}
@@ -55,20 +55,7 @@ export const Header: React.FC<any> = ({ user }) => {
         </div>
       </div>
       {/* right menu */}
-      {user && (
-        // <div style={{ padding: '5px 15px' }}>
-        //   <Link to={`/admin/${user?.email?.split('@')[0]}`}>
-        //     <img src={user.picture} height="25px" width="25px" />
-        //   </Link>
-        // </div>
-        <AuthButton />
-      )}
-      {!user && (
-        <div>
-          {/* <AuthIcon width="25px" height="25px" /> */}
-          <AuthButton />
-        </div>
-      )}
+     <AuthButton /> 
     </WrapperHeader>
   );
 };

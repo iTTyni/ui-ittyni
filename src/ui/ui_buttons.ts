@@ -21,4 +21,5 @@ export const StyledButton = styled('div')<{
   font-family: Roboto, sans-serif;
   justify-content: center;
   outline: -webkit-focus-ring-color auto 1px;
+  cursor: pointer;
 `;
