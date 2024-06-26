@@ -44,7 +44,7 @@ export const AdminSidebar: React.FC<any> = ({ user }) => {
                         <li><Link to={`/admin/${user?.email?.split('@')[0]}/profile`}> Profile </Link></li>
                         <li><Link to={`/admin/${user?.email?.split('@')[0]}/settings`}> Settings </Link></li>
                         <li><Link to={`/admin/${user?.email?.split('@')[0]}/category`}> Category </Link></li>
-                        <li><Link to={`/admin/${user?.email?.split('@')[0]}/product`}> list Product </Link></li>
+                        <li><Link to={`/admin/${user?.email?.split('@')[0]}/user/dash`}> list Product </Link></li>
                     </ul>
 
                     <ExtensionsAdminMenu 
