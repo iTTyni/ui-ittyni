@@ -32,12 +32,15 @@ export const WrapperSubheader = styled('div') <{
 }>`
     
   margin-top: 60px;
+  margin-left: 60px;
 `
 
 export const WrapperMain = styled('div') <{
 
 }>`
   display: flex;
+  padding: 50px;
+  height: 89vh;
 `
 
 export const WrapperContent = styled('div') <{
@@ -46,7 +49,7 @@ export const WrapperContent = styled('div') <{
   width: 100%;
   min-height: 88vh;
   margin: 0 15px;
-  padding-left: 250px;
+  // padding-left: 50px;
   padding-top: 30px;
   display: flex;
   overflow-y: scroll;
