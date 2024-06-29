@@ -1,10 +1,11 @@
 import * as React from 'react';
 import styled from 'styled-components';
-
+import { Link } from 'react-router-dom'
 
 export interface MenuItemProps {
   icon: any;
   text: string;
+  link: string;
 }
 
 // Menu section container
@@ -15,7 +16,7 @@ const MenuSectionContainer = styled.div`
   padding-bottom: 10px;
 `;
 
-const MenuItem = styled.div`
+const MenuItem = styled(Link)`
   width: 100%;
   padding: 10px 0;
   display: flex;
@@ -61,7 +62,7 @@ const MenuSection: React.FC<MenuSectionProps> = ({ items }) => {
   return (
     <MenuSectionContainer>
       {items.map((item, index) => (
-        <MenuItem key={index}>
+        <MenuItem key={index} to={item.link}>
           <MenuIcon>{item.icon}</MenuIcon>
           <MenuText>{item.text}</MenuText>
         </MenuItem>
