@@ -8,7 +8,7 @@ export const Subheader: React.FC<any> = ({ }) => {
 
     return (
         <WrapperSubheader>
-            <Route path={`/`} component={Search} exact/>
+            <Route path={`/`} element={Search} />
         </WrapperSubheader>
     )
 }
