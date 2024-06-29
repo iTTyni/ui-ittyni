@@ -48,9 +48,7 @@ export const WrapperContent = styled('div') <{
 }>`
   width: 100%;
   min-height: 88vh;
-  margin: 0 15px;
-  // padding-left: 50px;
-  padding-top: 30px;
+  padding: 0 15px;
   display: flex;
   overflow-y: scroll;
   &::-webkit-scrollbar {
@@ -60,7 +58,7 @@ export const WrapperContent = styled('div') <{
   scrollbar-width: none;  /* Firefox */
 
   ${device.largeDesktop`
-      margin: 15px;
+      margin: 0;
     `}
   ${device.mobile`
     width: 100%;
@@ -108,4 +106,6 @@ export const WrapperFooter = styled('div') <{
 
 }>`
     padding: 15px 15px 15px 250px;
+    position: fixed;
+    bottom: 0;
 `
