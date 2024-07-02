@@ -27,7 +27,7 @@ export const IcoRenderer = styled(
       xmlns="http://www.w3.org/2000/svg"
       viewBox={viewBox}
     >
-      {groups ? (
+    {groups&& 
         groups.map((group, groupIndex) => (
           <g key={groupIndex} {...group.attributes}>
             {group.paths.map((path, pathIndex) => (
@@ -35,12 +35,13 @@ export const IcoRenderer = styled(
             ))}
           </g>
         ))
-      ) : (
+      }
+      {
         paths &&
         paths.map((path, pathIndex) => (
           <path d={path.d} key={pathIndex} />
         ))
-      )}
+      } 
     </svg>
   )
 ).attrs({ className: '' })`

@@ -1,6 +1,7 @@
 import * as React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom'
+import { IcoRenderer } from '../../../components/ico_renderer';
 
 export interface MenuItemProps {
   icon: any;
@@ -59,11 +60,13 @@ interface MenuSectionProps {
 }
 
 const MenuSection: React.FC<MenuSectionProps> = ({ items }) => {
+  console.log(items)
   return (
     <MenuSectionContainer>
-      {items.map((item, index) => (
+      {items&&items.map((item, index) => (
         <MenuItem key={index} to={item.link}>
-          <MenuIcon>{item.icon}</MenuIcon>
+          <MenuIcon><IcoRenderer {...item.icon} width='35px' height='35px' /></MenuIcon>
+          {/* <MenuIcon>{item.icon}</MenuIcon> */}
           <MenuText>{item.text}</MenuText>
         </MenuItem>
       ))}

@@ -29,6 +29,7 @@ export * from './src/layout/sides/webSidebar'
 export * from './src/layout/sides/webRightbar'
 // components
 export * from './src/components/edit-in-place'
+export * from './src/components/ico_renderer'
 export * from './src/components/dropdowns'
 export * from './src/components/breadcrumbs'
 export * from './src/components/tab'
