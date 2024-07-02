@@ -39,7 +39,7 @@ export const WrapperMain = styled('div') <{
 
 }>`
   display: flex;
-  padding: 50px;
+  padding: 50px 0 0 50px;
   height: 89vh;
 `
 
@@ -105,7 +105,9 @@ export const WrapperRightSide = styled('div') <{
 export const WrapperFooter = styled('div') <{
 
 }>`
-    padding: 15px 15px 15px 250px;
-    position: fixed;
-    bottom: 0;
+  border-top: 1px solid lightgray;
+  width: 100%;
+  margin-left: 50px;
+  position: fixed;
+  bottom: 0; 
 `
