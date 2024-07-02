@@ -1,0 +1,77 @@
+import * as React from 'react';
+import styled from 'styled-components';
+import { Link } from 'react-router-dom'
+import { IcoRenderer } from '../../../components/ico_renderer';
+
+export interface MenuItemProps {
+  icon: any;
+  text: string;
+  link: string;
+}
+
+// Menu section container
+const MenuSectionContainer = styled.div`
+  width: 100%;
+  margin-bottom: 20px;
+  border-bottom: 0.5px solid #c1c1c1;
+  padding-bottom: 10px;
+`;
+
+const MenuItem = styled(Link)`
+  width: 100%;
+  padding: 10px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  color: #333;
+  font-size: 14px;
+  border-radius: 4px;
+  position: relative;
+  &:hover {
+    background-color: #f0f0f0;
+  }
+  &:hover span {
+    display: block;
+  }
+`;
+
+const MenuIcon = styled("span")`
+  height: 25px;
+  i { font-size: 28px; color: black; }
+`;
+
+const MenuText = styled.span`
+  display: none;
+  position: absolute;
+  left: 60px;
+  white-space: nowrap;
+  background-color: #333;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 3px;
+  font-size: 12px;
+  z-index: 10;
+`;
+
+interface MenuSectionProps {
+  title: string;
+  items: MenuItemProps[];
+}
+
+const MenuSection: React.FC<MenuSectionProps> = ({ items }) => {
+  console.log(items)
+  return (
+    <MenuSectionContainer>
+      {items&&items.map((item, index) => (
+        <MenuItem key={index} to={item.link}>
+          <MenuIcon><IcoRenderer {...item.icon} width='35px' height='35px' /></MenuIcon>
+          {!item.icon?.viewBox&&<MenuIcon>{item.icon}</MenuIcon> }
+          <MenuText>{item.text}</MenuText>
+        </MenuItem>
+      ))}
+    </MenuSectionContainer>
+  );
+};
+
+export default MenuSection;
