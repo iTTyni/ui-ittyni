@@ -65,8 +65,8 @@ const MenuSection: React.FC<MenuSectionProps> = ({ items }) => {
     <MenuSectionContainer>
       {items&&items.map((item, index) => (
         <MenuItem key={index} to={item.link}>
-          <MenuIcon><IcoRenderer {...item.icon} width='35px' height='35px' /></MenuIcon>
-          {!item.icon?.viewBox&&<MenuIcon>{item.icon}</MenuIcon> }
+          {typeof item.icon != 'object'&&<MenuIcon><IcoRenderer svgString={item.icon} width='25px' height='25px' color='gray'/></MenuIcon>}
+          {typeof item.icon === 'object'&&<MenuIcon>{item.icon}</MenuIcon> }
           <MenuText>{item.text}</MenuText>
         </MenuItem>
       ))}
