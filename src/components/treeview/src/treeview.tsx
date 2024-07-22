@@ -44,7 +44,6 @@ const TreeNode: React.FC<any> = ({ node }) => {
     setIsExpanded(!isExpanded)
   }
 
-  console.log(node)
   return (
     <div>
       <div onClick={toggleExpansion}>

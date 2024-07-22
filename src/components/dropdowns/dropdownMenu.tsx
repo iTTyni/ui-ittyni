@@ -21,7 +21,6 @@ export const DropdownMenu: React.FC<{
   const [showMenu, setShowMenu] = React.useState<boolean>(show);
   
  React.useEffect(() => {
-    console.log('show effect', show);
     setShowMenu(show);
   }, [show]);
   return (

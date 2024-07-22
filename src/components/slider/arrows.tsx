@@ -24,7 +24,6 @@ export const Arrows: React.FC<{
 }>= ({onLeftClick, onRighClick})=>{
 
 
-  console.log("Arrows rendered")
   return(
     <StyledArrows>
       <span className="ss-active-left" onClick={onLeftClick}>

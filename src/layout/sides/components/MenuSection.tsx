@@ -60,7 +60,6 @@ interface MenuSectionProps {
 }
 
 const MenuSection: React.FC<MenuSectionProps> = ({ items }) => {
-  console.log(items)
   return (
     <MenuSectionContainer>
       {items&&items.map((item, index) => (

@@ -26,7 +26,6 @@ export const Indicators: React.FC<{
     },[count, activeIndicator]
   )
 
-  console.log("indicators rendered")
   return (
     <StyledIndicators>
       {indicators}

@@ -59,8 +59,6 @@ export const KWS: React.FC<KWSOptions> = ({
   }, [options]);
 
 
-  console.log('initialOptions', initialOptions)
-
   return (
     <KWSContainer className="multiSelectContainer" ref={ref}>
       {/* input to enter a filter or a search word */}
