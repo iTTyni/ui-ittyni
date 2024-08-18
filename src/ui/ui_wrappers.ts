@@ -34,6 +34,13 @@ export const WrapperSubheader = styled('div') <{
   margin-top: 60px;
   margin-left: 60px;
 `
+export const WrapperWebMain = styled('div') <{
+
+}>`
+  display: flex;
+  padding: 50px 0 0 50px;
+`
+
 
 export const WrapperMain = styled('div') <{
 
