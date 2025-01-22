@@ -1,14 +1,27 @@
-import * as React from 'react';
-import {CardContainer} from '../../../ui'
-
-export const Card: React.VFC<any>= ({})=> {
-    return (
-        <CardContainer>
-            <div className="card-body">
-                <h5 className="card-title">Card title</h5>
-                <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" className="btn btn-primary">Go somewhere</a>
-            </div>
-        </CardContainer>
-    );
+import * as React from "react";
+import { CardIcon, CardText, CardBody } from "../../../../";
+export const Card: React.FC<{ title?: string; details?: string; icon?: string, addressedTo?: string }> = ({
+  title,
+  details,
+  icon,
+}) => {
+  return (
+    <CardBody>
+      <CardIcon>
+        <span className="icon">
+          <i className={icon} aria-hidden="true"></i>
+        </span>
+      </CardIcon>
+      <CardText>
+        <div className="title">
+          <span>{title}</span>
+        </div>
+        <div className="details">
+          <span>{details}</span>
+        </div>
+      </CardText>
+    </CardBody>
+  );
 };
+
+export default Card;

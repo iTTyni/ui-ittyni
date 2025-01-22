@@ -12,7 +12,8 @@ export const darkTheme: IThemeInterface = {
     primaryColor: "#e9e9eb",
     secondaryColor: "#2a2c39",
     thirdColor: "#F2F4F6",
-    fourthColor: "#423030"
+    fourthColor: "#423030",
+    fiveColor: "#fbfafd"
   },
   font: {
     fontSize: 12,
@@ -30,10 +31,11 @@ export const lightTheme: IThemeInterface = {
   },
   color: {
     defaultColor: "#ffffff",
-    primaryColor: "#ffffff",
+    primaryColor: "#e9e9eb",
     secondaryColor: "#2a2c39",
     thirdColor: "#F2F4F6",
-    fourthColor: "#423030"
+    fourthColor: "#423030",
+    fiveColor: "#fbfafd"
   },
   font: {
 

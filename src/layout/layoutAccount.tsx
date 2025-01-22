@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-export const LayoutAccount: React.VFC<any> = () => {
+export const LayoutAccount: React.FC<any> = () => {
 
 
     return (
