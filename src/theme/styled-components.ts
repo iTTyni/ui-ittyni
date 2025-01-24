@@ -11,23 +11,76 @@ const {
 >;
 
 export interface IThemeInterface {
-  globals: {
-    backgroundColor: string
-    margin: number
-    padding: number
-  },
-  color: {
-    defaultColor: string;
-    primaryColor: string;
-    secondaryColor: string;
-    thirdColor: string;
-    fourthColor: string;
-    fiveColor: string;
-  },
-  font: {
-    fontSize: number,
-    fontFamily: string
-  },
+  application: {
+    accentColor: string;
+    fontSize: string;
+    fontFamily: string;
+    bgColor: string;
+    borderColor: string;
+    borderRedius: string
+    padding: string;
+  };
+  scrollbar: {
+    width: string;
+    track: {
+      bgColor: string;
+    };
+    thumb: {
+      bgColor: string;
+      hoverBgColor: string;
+    };
+  };
+  selection: {
+    bgColor: string;
+    color: string;
+  };
+  typography: {
+    lineHeight: string;
+  };
+  button: {
+    color: string;
+    border: string;
+    bgColor: string;
+    hoverBgColor: string;
+    activeBgColor: string;
+    shadowColor: string;
+  };
+  title: {
+    bar: {
+      bgColor: string;
+      color: string;
+      titleColor: string;
+      menu: {
+        borderColor: string;
+        titleHoverBgColor: string;
+        titleActive: {
+          bgColor: string;
+          borderColor: string;
+        };
+        separator: {
+          bgColor: string;
+        };
+      };
+      popup: {
+        bgColor: string;
+        border: string;
+        shadow: string;
+        item: {
+          nameColor: string;
+          shortcutColor: string;
+          hover: {
+            color: string;
+            bgColor: string;
+            shortcutColor: string;
+          };
+          nameShadowColor: string;
+        };
+      };
+    };
+  };
+  ittyni: {
+    headingColor: string;
+  };
   windowHeight: number
 }
 
